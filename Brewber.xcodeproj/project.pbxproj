@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C3A0F86B1C449E5800E7A23E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F86A1C449E5800E7A23E /* AppDelegate.swift */; };
+		C3A0F86D1C449E5800E7A23E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F86C1C449E5800E7A23E /* ViewController.swift */; };
+		C3A0F8701C449E5800E7A23E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A0F86E1C449E5800E7A23E /* Main.storyboard */; };
+		C3A0F8721C449E5800E7A23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3A0F8711C449E5800E7A23E /* Assets.xcassets */; };
+		C3A0F8751C449E5800E7A23E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A0F8731C449E5800E7A23E /* LaunchScreen.storyboard */; };
+		C3A0F8801C449E5800E7A23E /* BrewberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F87F1C449E5800E7A23E /* BrewberTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C3A0F87C1C449E5800E7A23E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3A0F85F1C449E5800E7A23E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3A0F8661C449E5800E7A23E;
+			remoteInfo = Brewber;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C3A0F8671C449E5800E7A23E /* Brewber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brewber.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3A0F86A1C449E5800E7A23E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C3A0F86C1C449E5800E7A23E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C3A0F86F1C449E5800E7A23E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C3A0F8711C449E5800E7A23E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C3A0F8741C449E5800E7A23E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C3A0F8761C449E5800E7A23E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3A0F87B1C449E5800E7A23E /* BrewberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrewberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3A0F87F1C449E5800E7A23E /* BrewberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewberTests.swift; sourceTree = "<group>"; };
+		C3A0F8811C449E5800E7A23E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3A0F8641C449E5800E7A23E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3A0F8781C449E5800E7A23E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C3A0F85E1C449E5800E7A23E = {
+			isa = PBXGroup;
+			children = (
+				C3A0F8691C449E5800E7A23E /* Brewber */,
+				C3A0F87E1C449E5800E7A23E /* BrewberTests */,
+				C3A0F8681C449E5800E7A23E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C3A0F8681C449E5800E7A23E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3A0F8671C449E5800E7A23E /* Brewber.app */,
+				C3A0F87B1C449E5800E7A23E /* BrewberTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3A0F8691C449E5800E7A23E /* Brewber */ = {
+			isa = PBXGroup;
+			children = (
+				C3A0F86A1C449E5800E7A23E /* AppDelegate.swift */,
+				C3A0F86C1C449E5800E7A23E /* ViewController.swift */,
+				C3A0F86E1C449E5800E7A23E /* Main.storyboard */,
+				C3A0F8711C449E5800E7A23E /* Assets.xcassets */,
+				C3A0F8731C449E5800E7A23E /* LaunchScreen.storyboard */,
+				C3A0F8761C449E5800E7A23E /* Info.plist */,
+			);
+			path = Brewber;
+			sourceTree = "<group>";
+		};
+		C3A0F87E1C449E5800E7A23E /* BrewberTests */ = {
+			isa = PBXGroup;
+			children = (
+				C3A0F87F1C449E5800E7A23E /* BrewberTests.swift */,
+				C3A0F8811C449E5800E7A23E /* Info.plist */,
+			);
+			path = BrewberTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C3A0F8661C449E5800E7A23E /* Brewber */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3A0F8841C449E5800E7A23E /* Build configuration list for PBXNativeTarget "Brewber" */;
+			buildPhases = (
+				C3A0F8631C449E5800E7A23E /* Sources */,
+				C3A0F8641C449E5800E7A23E /* Frameworks */,
+				C3A0F8651C449E5800E7A23E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Brewber;
+			productName = Brewber;
+			productReference = C3A0F8671C449E5800E7A23E /* Brewber.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C3A0F87A1C449E5800E7A23E /* BrewberTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3A0F8871C449E5800E7A23E /* Build configuration list for PBXNativeTarget "BrewberTests" */;
+			buildPhases = (
+				C3A0F8771C449E5800E7A23E /* Sources */,
+				C3A0F8781C449E5800E7A23E /* Frameworks */,
+				C3A0F8791C449E5800E7A23E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3A0F87D1C449E5800E7A23E /* PBXTargetDependency */,
+			);
+			name = BrewberTests;
+			productName = BrewberTests;
+			productReference = C3A0F87B1C449E5800E7A23E /* BrewberTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3A0F85F1C449E5800E7A23E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Alex Brashear";
+				TargetAttributes = {
+					C3A0F8661C449E5800E7A23E = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					C3A0F87A1C449E5800E7A23E = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = C3A0F8661C449E5800E7A23E;
+					};
+				};
+			};
+			buildConfigurationList = C3A0F8621C449E5800E7A23E /* Build configuration list for PBXProject "Brewber" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C3A0F85E1C449E5800E7A23E;
+			productRefGroup = C3A0F8681C449E5800E7A23E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3A0F8661C449E5800E7A23E /* Brewber */,
+				C3A0F87A1C449E5800E7A23E /* BrewberTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3A0F8651C449E5800E7A23E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3A0F8751C449E5800E7A23E /* LaunchScreen.storyboard in Resources */,
+				C3A0F8721C449E5800E7A23E /* Assets.xcassets in Resources */,
+				C3A0F8701C449E5800E7A23E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3A0F8791C449E5800E7A23E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3A0F8631C449E5800E7A23E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3A0F86D1C449E5800E7A23E /* ViewController.swift in Sources */,
+				C3A0F86B1C449E5800E7A23E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3A0F8771C449E5800E7A23E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3A0F8801C449E5800E7A23E /* BrewberTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C3A0F87D1C449E5800E7A23E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3A0F8661C449E5800E7A23E /* Brewber */;
+			targetProxy = C3A0F87C1C449E5800E7A23E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C3A0F86E1C449E5800E7A23E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3A0F86F1C449E5800E7A23E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C3A0F8731C449E5800E7A23E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3A0F8741C449E5800E7A23E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C3A0F8821C449E5800E7A23E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C3A0F8831C449E5800E7A23E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C3A0F8851C449E5800E7A23E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Brewber/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.brashear.Brewber;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C3A0F8861C449E5800E7A23E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Brewber/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.brashear.Brewber;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C3A0F8881C449E5800E7A23E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BrewberTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.brashear.BrewberTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Brewber.app/Brewber";
+			};
+			name = Debug;
+		};
+		C3A0F8891C449E5800E7A23E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BrewberTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.brashear.BrewberTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Brewber.app/Brewber";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C3A0F8621C449E5800E7A23E /* Build configuration list for PBXProject "Brewber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3A0F8821C449E5800E7A23E /* Debug */,
+				C3A0F8831C449E5800E7A23E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3A0F8841C449E5800E7A23E /* Build configuration list for PBXNativeTarget "Brewber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3A0F8851C449E5800E7A23E /* Debug */,
+				C3A0F8861C449E5800E7A23E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C3A0F8871C449E5800E7A23E /* Build configuration list for PBXNativeTarget "BrewberTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3A0F8881C449E5800E7A23E /* Debug */,
+				C3A0F8891C449E5800E7A23E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C3A0F85F1C449E5800E7A23E /* Project object */;
+}
