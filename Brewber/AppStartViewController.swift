@@ -28,9 +28,6 @@ class AppStartViewController: UIViewController {
         button.layer.borderColor = UIColor.whiteColor().CGColor
         button.layer.borderWidth = 1.0;
         button.clipsToBounds = true
-        let image: UIImage = UIImage()
-        let imageView: UIImageView = UIImageView(image: image)
-        imageView.backgroundColor = UIColor.whiteColor()
     }
     
     // MARK: - Navigation
@@ -40,9 +37,6 @@ class AppStartViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-
-    func applicationTintColor() -> UIColor {
-        return UIColor(red: 255.0, green: 45.0, blue: 85.0, alpha: 1.0)
-    }
+    
 
 }
