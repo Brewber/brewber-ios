@@ -8,16 +8,15 @@
 
 import UIKit
 
-class ContentViewController: UIViewController {    
+class ContentViewController: UIViewController {
+    @IBOutlet var secondPageButton: UIButton!
     @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var imageView: UIImageView!
-    var pageIndex: Int!
+    
     var titleText: String!
-    var imageFile: String!
+    var modelViewController: ViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.imageView.backgroundColor = UIColor.redColor()
         self.titleLabel.text = self.titleText
         // Do any additional setup after loading the view.
     }
@@ -27,6 +26,9 @@ class ContentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func buttonPressed(sender: AnyObject) {
+        self.modelViewController.moveToViewControllerAtIndex(1, pageDirection: UIPageViewControllerNavigationDirection.Forward)
+    }
     
     /*
     // MARK: - Navigation
