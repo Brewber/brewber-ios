@@ -17,6 +17,14 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.pageTitles = NSArray(objects: "Explore", "Today Widget")
+        self.setupPageViewController()
+        self.setupNavigationBar()
+        self.disablePageScrolling()
+        self.setupPageControl()
+        self.view.backgroundColor = UIColor.gray246Color()
+    }
+    
+    func setupPageViewController() {
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
         self.pageViewController.dataSource = self
         let startVC = self.viewControllerAtIndex(0) as! ContentViewController
@@ -26,13 +34,10 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         self.addChildViewController(self.pageViewController)
         self.view.addSubview(self.pageViewController.view)
         self.pageViewController.didMoveToParentViewController(self)
-        self.setupNavigationBar()
-        self.disablePageScrolling()
-        self.setupPageControl()
     }
     
     func setupNavigationBar() {
-        self.navigationController!.navigationBar.barTintColor = UIColor.brewberThemeColor()
+        self.navigationController!.navigationBar.barTintColor = UIColor.vividRedColor()
         self.navigationController?.navigationBar.topItem?.title = "Sign Up"
         let closeButton: UIBarButtonItem = UIBarButtonItem(title: "close", style: .Done, target: self, action: "doneButtonPressed")
         self.navigationItem.leftBarButtonItem = closeButton
@@ -78,7 +83,6 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         if (index == 0) {
             let vc: ContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ContentViewController") as! ContentViewController
             vc.modelViewController = self
-            vc.titleText = self.pageTitles[index] as! String
             return vc
         }
         else {
