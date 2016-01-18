@@ -27,27 +27,6 @@
                     <view key="view" contentMode="scaleToFill" id="aas-uw-q9e">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIY-BD-B8M">
-                                <rect key="frame" x="164" y="176" width="201" height="37"/>
-                                <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Sign up with Facebook">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign up with facebook to see who your friends are sending drinks too - Don't be the last to send Johnny his bday daiquiri" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GuU-sd-chW">
-                                <rect key="frame" x="86" y="92" width="356" height="76"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Or sign up with email instead - you will have the option to connect to social at any time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHX-DB-7Ya">
-                                <rect key="frame" x="86" y="273" width="356" height="53"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Y1q-9n-LkS"/>
@@ -71,24 +50,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJa-MT-7Oo">
-                                <rect key="frame" x="217" y="285" width="166" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sign up with facebook to see who your friends are sending drinks too - Don't be the last to send Johnny his bday daiquiri" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GuU-sd-chW">
+                                <rect key="frame" x="122" y="101" width="356" height="76"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="166" id="oJq-dY-og9"/>
+                                    <constraint firstAttribute="width" constant="356" id="ucU-rX-2cC"/>
                                 </constraints>
-                                <state key="normal" title="Second Page"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIY-BD-B8M">
+                                <rect key="frame" x="200" y="185" width="201" height="37"/>
+                                <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="ssY-9z-R3C"/>
+                                </constraints>
+                                <state key="normal" title="Sign up with Facebook">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="nUv-QP-RMc" eventType="touchUpInside" id="4eK-Ba-9g7"/>
+                                    <action selector="facebookButtonPressed:" destination="nUv-QP-RMc" eventType="touchUpInside" id="zYY-PW-4zk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQ1-ft-l8T">
+                                <rect key="frame" x="200" y="329" width="201" height="37"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal" title="Sign up with Email">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="emailButtonPressed:" destination="nUv-QP-RMc" eventType="touchUpInside" id="4fM-nV-HUO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Or sign up with email instead - you will have the option to connect to social at any time" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHX-DB-7Ya">
+                                <rect key="frame" x="122" y="268" width="356" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PJa-MT-7Oo" firstAttribute="centerY" secondItem="f79-fd-L7m" secondAttribute="centerY" id="JWd-GM-ZuC"/>
+                            <constraint firstItem="GuU-sd-chW" firstAttribute="top" secondItem="4DK-wq-p24" secondAttribute="bottom" constant="37" id="55F-IZ-bsR"/>
+                            <constraint firstItem="WHX-DB-7Ya" firstAttribute="top" secondItem="QIY-BD-B8M" secondAttribute="bottom" constant="46" id="6mZ-ru-Nfv"/>
+                            <constraint firstItem="WHX-DB-7Ya" firstAttribute="centerX" secondItem="f79-fd-L7m" secondAttribute="centerX" id="AAa-Pi-Xfo"/>
+                            <constraint firstItem="XQ1-ft-l8T" firstAttribute="centerX" secondItem="f79-fd-L7m" secondAttribute="centerX" id="JFH-n0-YSF"/>
+                            <constraint firstItem="QIY-BD-B8M" firstAttribute="top" secondItem="GuU-sd-chW" secondAttribute="bottom" constant="8" id="MqF-dk-LGh"/>
+                            <constraint firstItem="QIY-BD-B8M" firstAttribute="centerX" secondItem="f79-fd-L7m" secondAttribute="centerX" id="VAi-nB-Zxg"/>
+                            <constraint firstItem="XQ1-ft-l8T" firstAttribute="width" secondItem="QIY-BD-B8M" secondAttribute="width" id="Wqk-F2-YUu"/>
+                            <constraint firstItem="XQ1-ft-l8T" firstAttribute="leading" secondItem="QIY-BD-B8M" secondAttribute="leading" id="gOn-GW-8oT"/>
+                            <constraint firstItem="XQ1-ft-l8T" firstAttribute="top" secondItem="WHX-DB-7Ya" secondAttribute="bottom" constant="8" id="jN4-xY-1kB"/>
+                            <constraint firstItem="WHX-DB-7Ya" firstAttribute="width" secondItem="GuU-sd-chW" secondAttribute="width" id="mHF-3m-ztK"/>
+                            <constraint firstItem="GuU-sd-chW" firstAttribute="centerX" secondItem="f79-fd-L7m" secondAttribute="centerX" id="oVC-86-ESS"/>
+                            <constraint firstItem="WHX-DB-7Ya" firstAttribute="leading" secondItem="GuU-sd-chW" secondAttribute="leading" id="qgL-hA-C8B"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="secondPageButton" destination="PJa-MT-7Oo" id="Wda-th-F0B"/>
+                        <outlet property="emailButton" destination="XQ1-ft-l8T" id="RI9-LT-zo4"/>
+                        <outlet property="emailLabel" destination="WHX-DB-7Ya" id="GBs-Dj-KAL"/>
+                        <outlet property="facebookButton" destination="QIY-BD-B8M" id="mIl-Dq-YGI"/>
+                        <outlet property="facebookLabel" destination="GuU-sd-chW" id="5Wm-lf-28F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lS5-ap-foR" userLabel="First Responder" sceneMemberID="firstResponder"/>

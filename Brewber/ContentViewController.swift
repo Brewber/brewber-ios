@@ -8,26 +8,35 @@
 
 import UIKit
 
-class ContentViewController: UIViewController {
-    @IBOutlet var secondPageButton: UIButton!
+class ContentViewController: UIViewController {    
+    @IBOutlet var facebookButton: UIButton!
+    @IBOutlet var facebookLabel: UILabel!
+    
+    @IBOutlet var emailLabel: UILabel!
+    @IBOutlet var emailButton: UIButton!
     
     var modelViewController: ViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.gray246Color()
-        // Do any additional setup after loading the view.
+        self.setupButtonCorners(emailButton)
+        self.setupButtonCorners(facebookButton)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func setupButtonCorners(button: UIButton) {
+        button.layer.cornerRadius = 5
+        button.clipsToBounds = true
     }
     
-    @IBAction func buttonPressed(sender: AnyObject) {
+    // MARK: - IBActions
+    
+    @IBAction func facebookButtonPressed(sender: AnyObject) {
+    }
+    
+    @IBAction func emailButtonPressed(sender: AnyObject) {
         self.modelViewController.moveToViewControllerAtIndex(1, pageDirection: UIPageViewControllerNavigationDirection.Forward)
     }
-    
     /*
     // MARK: - Navigation
     

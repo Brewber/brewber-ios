@@ -39,7 +39,8 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
     func setupNavigationBar() {
         self.navigationController!.navigationBar.barTintColor = UIColor.vividRedColor()
         self.navigationController?.navigationBar.topItem?.title = "Sign Up"
-        let closeButton: UIBarButtonItem = UIBarButtonItem(title: "close", style: .Done, target: self, action: "doneButtonPressed")
+        let closeButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Stop, target: self, action: "doneButtonPressed")
+        closeButton.tintColor = UIColor.whiteColor()
         self.navigationItem.leftBarButtonItem = closeButton
         self.navigationController?.navigationBar.translucent = false
         
@@ -54,8 +55,8 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
     func setupPageControl() {
         let pageControl = UIPageControl.appearance()
         pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
-        pageControl.currentPageIndicatorTintColor = UIColor.blackColor()
-        pageControl.backgroundColor = UIColor.whiteColor()
+        pageControl.currentPageIndicatorTintColor = UIColor.vividRedColor()
+        pageControl.backgroundColor = UIColor.gray246Color()
     }
     
     func disablePageScrolling() {
