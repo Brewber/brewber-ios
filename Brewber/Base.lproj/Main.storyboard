@@ -27,6 +27,27 @@
                     <view key="view" contentMode="scaleToFill" id="aas-uw-q9e">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIY-BD-B8M">
+                                <rect key="frame" x="164" y="176" width="201" height="37"/>
+                                <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Sign up with Facebook">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign up with facebook to see who your friends are sending drinks too - Don't be the last to send Johnny his bday daiquiri" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GuU-sd-chW">
+                                <rect key="frame" x="86" y="92" width="356" height="76"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Or sign up with email instead - you will have the option to connect to social at any time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHX-DB-7Ya">
+                                <rect key="frame" x="86" y="273" width="356" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Y1q-9n-LkS"/>
@@ -50,16 +71,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ki4-fx-ll4">
-                                <rect key="frame" x="89" y="47" width="422" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="eox-cN-nxg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJa-MT-7Oo">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJa-MT-7Oo">
                                 <rect key="frame" x="217" y="285" width="166" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="166" id="oJq-dY-og9"/>
@@ -73,15 +85,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="PJa-MT-7Oo" firstAttribute="centerY" secondItem="f79-fd-L7m" secondAttribute="centerY" id="JWd-GM-ZuC"/>
-                            <constraint firstItem="ki4-fx-ll4" firstAttribute="leading" secondItem="f79-fd-L7m" secondAttribute="leadingMargin" constant="69" id="KBG-Ql-u5W"/>
-                            <constraint firstItem="ki4-fx-ll4" firstAttribute="centerX" secondItem="f79-fd-L7m" secondAttribute="centerX" id="Mpy-J6-So8"/>
-                            <constraint firstItem="PJa-MT-7Oo" firstAttribute="centerX" secondItem="ki4-fx-ll4" secondAttribute="centerX" id="gw9-Za-BqP"/>
-                            <constraint firstItem="ki4-fx-ll4" firstAttribute="top" secondItem="f79-fd-L7m" secondAttribute="topMargin" constant="47" id="k37-ob-smT"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="secondPageButton" destination="PJa-MT-7Oo" id="Wda-th-F0B"/>
-                        <outlet property="titleLabel" destination="ki4-fx-ll4" id="n0F-9o-OEe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lS5-ap-foR" userLabel="First Responder" sceneMemberID="firstResponder"/>
