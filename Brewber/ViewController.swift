@@ -10,13 +10,16 @@ import UIKit
 
 class ViewController: UIViewController, UIPageViewControllerDataSource {
     
-    let pageControlOffset: CGFloat = 60
+    let SocialSignupViewControllerIndex: Int = 0
+    let EmailSignupViewControllerIndex: Int = 1
+    let PhoneVerificationViewControllerIndex: Int = 2
+    let ZipcodeEntryViewControllerIndex: Int = 3
+    
+    let pageControlOffset: CGFloat = 40
     var pageViewController: UIPageViewController!
-    var pageTitles: NSArray!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.pageTitles = NSArray(objects: "Explore", "Today Widget")
         self.setupPageViewController()
         self.setupNavigationBar()
         self.disablePageScrolling()
@@ -77,57 +80,81 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
     }
     
     func viewControllerAtIndex(index: Int) -> UIViewController {
-        
-        if ((self.pageTitles.count == 0) || (index >= self.pageTitles.count)) {
-            return ContentViewController()
-        }
-        if (index == 0) {
+        if (index == SocialSignupViewControllerIndex) {
             let vc: ContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ContentViewController") as! ContentViewController
             vc.modelViewController = self
             return vc
         }
-        else {
+        else if (index == EmailSignupViewControllerIndex) {
             let vc: TestViewController = self.storyboard?.instantiateViewControllerWithIdentifier("TestViewController") as! TestViewController
             vc.modelViewController = self
             return vc
+        }
+        else if (index == PhoneVerificationViewControllerIndex) {
+            let vc: PhoneVerificationViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PhoneVerificationViewController") as! PhoneVerificationViewController
+            vc.modelViewController = self
+            return vc
+        }
+        else if (index == ZipcodeEntryViewControllerIndex) {
+            let vc: ZipcodeBirthdayViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ZipcodeBirthdayViewController") as! ZipcodeBirthdayViewController
+            vc.modelViewController = self
+            return vc
+        }
+        else {
+            print("Incorrect index \(index)")
+            return ContentViewController()
         }
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         if (viewController.isKindOfClass(ContentViewController)) {
-            // this is the first vc
             return nil
         }
         else if (viewController.isKindOfClass(TestViewController)) {
-            // this is the last vc
-            return self.viewControllerAtIndex(0)
+            return self.viewControllerAtIndex(SocialSignupViewControllerIndex)
+        }
+        else if (viewController.isKindOfClass(PhoneVerificationViewController)) {
+            return self.viewControllerAtIndex(EmailSignupViewControllerIndex)
+        }
+        else if (ViewController.isKindOfClass(ZipcodeBirthdayViewController)) {
+            return self.viewControllerAtIndex(PhoneVerificationViewControllerIndex)
         }
         return nil
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         if (viewController.isKindOfClass(ContentViewController)) {
-            // this is the first vc
-            return self.viewControllerAtIndex(1)
+            return self.viewControllerAtIndex(EmailSignupViewControllerIndex)
         }
         else if (viewController.isKindOfClass(TestViewController)) {
-            // this is the last vc
+            return self.viewControllerAtIndex(PhoneVerificationViewControllerIndex)
+        }
+        else if (viewController.isKindOfClass(PhoneVerificationViewController)) {
+            return self.viewControllerAtIndex(ZipcodeEntryViewControllerIndex)
+        }
+        else if (ViewController.isKindOfClass(ZipcodeBirthdayViewController)) {
             return nil
         }
         return nil
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return self.pageTitles.count
+        return 4
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
         let viewController: UIViewController = self.pageViewController.viewControllers![0]
         if (viewController.isKindOfClass(ContentViewController)) {
-            return 0
+            return SocialSignupViewControllerIndex
         }
         else if (viewController.isKindOfClass(TestViewController)) {
-            return 1
+            return EmailSignupViewControllerIndex
+        }
+        else if (viewController.isKindOfClass(PhoneVerificationViewController)) {
+            return PhoneVerificationViewControllerIndex
+        }
+        else if (viewController.isKindOfClass(ZipcodeBirthdayViewController)) {
+            return ZipcodeEntryViewControllerIndex
         }
         return 0
     }

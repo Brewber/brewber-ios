@@ -17,6 +17,8 @@
 		C3A0F8951C49FCB200E7A23E /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F8941C49FCB200E7A23E /* ContentViewController.swift */; };
 		C3A0F8C51C4C044D00E7A23E /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F8C41C4C044D00E7A23E /* TestViewController.swift */; };
 		C3A0F8F51C4C94BE00E7A23E /* UIColor+BrewberThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F8F41C4C94BE00E7A23E /* UIColor+BrewberThemes.swift */; };
+		C3A0F9251C4D795D00E7A23E /* PhoneVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F9241C4D795D00E7A23E /* PhoneVerificationViewController.swift */; };
+		C3A0F9271C4D91F500E7A23E /* ZipcodeBirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F9261C4D91F500E7A23E /* ZipcodeBirthdayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		C3A0F8941C49FCB200E7A23E /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		C3A0F8C41C4C044D00E7A23E /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		C3A0F8F41C4C94BE00E7A23E /* UIColor+BrewberThemes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+BrewberThemes.swift"; sourceTree = "<group>"; };
+		C3A0F9241C4D795D00E7A23E /* PhoneVerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewController.swift; sourceTree = "<group>"; };
+		C3A0F9261C4D91F500E7A23E /* ZipcodeBirthdayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipcodeBirthdayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 				C3A0F88A1C48C51B00E7A23E /* AppStartViewController.swift */,
 				C3A0F8F41C4C94BE00E7A23E /* UIColor+BrewberThemes.swift */,
 				C3A0F86E1C449E5800E7A23E /* Main.storyboard */,
+				C3A0F9261C4D91F500E7A23E /* ZipcodeBirthdayViewController.swift */,
+				C3A0F9241C4D795D00E7A23E /* PhoneVerificationViewController.swift */,
 				C3A0F8921C49FB9700E7A23E /* ViewController.swift */,
 				C3A0F8C41C4C044D00E7A23E /* TestViewController.swift */,
 				C3A0F8941C49FCB200E7A23E /* ContentViewController.swift */,
@@ -211,6 +217,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3A0F8C51C4C044D00E7A23E /* TestViewController.swift in Sources */,
+				C3A0F9251C4D795D00E7A23E /* PhoneVerificationViewController.swift in Sources */,
+				C3A0F9271C4D91F500E7A23E /* ZipcodeBirthdayViewController.swift in Sources */,
 				C3A0F8931C49FB9700E7A23E /* ViewController.swift in Sources */,
 				C3A0F88B1C48C51B00E7A23E /* AppStartViewController.swift in Sources */,
 				C3A0F8F51C4C94BE00E7A23E /* UIColor+BrewberThemes.swift in Sources */,

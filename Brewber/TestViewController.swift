@@ -14,14 +14,22 @@ class TestViewController: UIViewController {
     var firstViewController: ContentViewController!
     var modelViewController: ViewController!
 
-    @IBOutlet var firstPageButton: UIButton!
+    @IBOutlet var continueButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.firstPageButton.titleLabel?.text = "FIRST PAGE"
+        self.view.backgroundColor = UIColor.gray246Color()
         self.pageViewController = self.parentViewController as! UIPageViewController
+        self.setupContinueButton()
     }
 
-    @IBAction func buttonPressed(sender: AnyObject) {
-        self.modelViewController.moveToViewControllerAtIndex(0, pageDirection: UIPageViewControllerNavigationDirection.Reverse)
+    func setupContinueButton() {
+        self.continueButton.titleLabel!.text = "Continue"
+        self.continueButton.layer.cornerRadius = 5
+        self.continueButton.clipsToBounds = true
+    }
+    
+    @IBAction func continueButtonPressed(sender: AnyObject) {
+        self.modelViewController.moveToViewControllerAtIndex(2, pageDirection: .Forward)
     }
 }
