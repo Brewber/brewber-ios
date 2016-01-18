@@ -10,14 +10,12 @@ import UIKit
 
 class ContentViewController: UIViewController {
     @IBOutlet var secondPageButton: UIButton!
-    @IBOutlet var titleLabel: UILabel!
     
-    var titleText: String!
     var modelViewController: ViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.titleLabel.text = self.titleText
+        self.view.backgroundColor = UIColor.gray246Color()
         // Do any additional setup after loading the view.
     }
     
