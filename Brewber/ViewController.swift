@@ -26,8 +26,24 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         self.addChildViewController(self.pageViewController)
         self.view.addSubview(self.pageViewController.view)
         self.pageViewController.didMoveToParentViewController(self)
+        self.setupNavigationBar()
         self.disablePageScrolling()
         self.setupPageControl()
+    }
+    
+    func setupNavigationBar() {
+        self.navigationController!.navigationBar.barTintColor = UIColor.brewberThemeColor()
+        self.navigationController?.navigationBar.topItem?.title = "Sign Up"
+        let closeButton: UIBarButtonItem = UIBarButtonItem(title: "close", style: .Done, target: self, action: "doneButtonPressed")
+        self.navigationItem.leftBarButtonItem = closeButton
+        self.navigationController?.navigationBar.translucent = false
+        
+        let titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationController?.navigationBar.titleTextAttributes = titleTextAttributes
+    }
+    
+    func doneButtonPressed() {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func setupPageControl() {
