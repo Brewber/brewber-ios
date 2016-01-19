@@ -34,8 +34,12 @@ extension UIColor {
         return UIColor(white: 185.0 / 255.0, alpha: 1.0)
     }
     
-    class func facebookBlue() -> UIColor {
+    class func facebookBlueColor() -> UIColor {
         return UIColor(red: 59.0 / 255.0, green: 89.0 / 255.0, blue: 152.0 / 255.0, alpha: 1.0)
+    }
+    
+    class func vividRedNoSelectionColor() -> UIColor {
+        return UIColor(red: 1.0, green: 45.0 / 255.0, blue: 85.0 / 255.0, alpha: 0.5)
     }
     
 }

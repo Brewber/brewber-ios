@@ -186,6 +186,8 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="continueButton" destination="77u-vU-a3r" id="PLD-76-pLt"/>
+                        <outlet property="passwordTextField" destination="TU5-kq-Wo2" id="oIB-ss-osR"/>
+                        <outlet property="usernameTextField" destination="3HA-oG-P47" id="WfC-qb-9G5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TRD-Ld-FNP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -357,12 +359,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lu-YQ-zR2">
+                                <rect key="frame" x="190" y="430" width="221" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="221" id="Cyt-1G-T78"/>
+                                    <constraint firstAttribute="height" constant="30" id="fqj-id-W6M"/>
+                                </constraints>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="VerifyButtonPressed:" destination="ri5-w2-nCL" eventType="touchUpInside" id="IgM-Uc-EUv"/>
+                                    <action selector="signupButtonPressed:" destination="obK-Em-p4T" eventType="touchUpInside" id="vC8-3y-4r5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lfB-bz-6bk" firstAttribute="leading" secondItem="1jW-8A-GQ8" secondAttribute="trailing" id="2FG-HB-8CQ"/>
                             <constraint firstItem="6Hb-FL-ZEO" firstAttribute="centerX" secondItem="KpC-9y-seu" secondAttribute="centerX" id="2SC-cC-WYJ"/>
                             <constraint firstItem="DXX-64-IzT" firstAttribute="height" secondItem="lfB-bz-6bk" secondAttribute="height" id="Cup-iV-c21"/>
+                            <constraint firstItem="2lu-YQ-zR2" firstAttribute="centerX" secondItem="KpC-9y-seu" secondAttribute="centerX" id="EET-Wo-K5N"/>
                             <constraint firstItem="1jW-8A-GQ8" firstAttribute="leading" secondItem="DXX-64-IzT" secondAttribute="trailing" id="KBz-0r-FQX"/>
                             <constraint firstItem="DXX-64-IzT" firstAttribute="top" secondItem="1jW-8A-GQ8" secondAttribute="top" id="Xge-2o-UGd"/>
                             <constraint firstItem="DXX-64-IzT" firstAttribute="top" secondItem="Nt0-r4-wkN" secondAttribute="bottom" constant="25" id="XpZ-e6-WHS"/>
@@ -370,6 +388,7 @@
                             <constraint firstItem="DXX-64-IzT" firstAttribute="width" secondItem="lfB-bz-6bk" secondAttribute="width" id="enj-H2-UTA"/>
                             <constraint firstItem="1jW-8A-GQ8" firstAttribute="centerX" secondItem="KpC-9y-seu" secondAttribute="centerX" id="ic1-TE-vrJ"/>
                             <constraint firstItem="Nt0-r4-wkN" firstAttribute="centerX" secondItem="KpC-9y-seu" secondAttribute="centerX" id="idO-Hs-Cxx"/>
+                            <constraint firstItem="2lu-YQ-zR2" firstAttribute="top" secondItem="6Hb-FL-ZEO" secondAttribute="bottom" constant="55" id="mFg-Ga-YtK"/>
                             <constraint firstItem="DXX-64-IzT" firstAttribute="height" secondItem="1jW-8A-GQ8" secondAttribute="height" id="nLL-3m-r3g"/>
                             <constraint firstItem="DXX-64-IzT" firstAttribute="top" secondItem="lfB-bz-6bk" secondAttribute="top" id="o2v-IE-Fgr"/>
                             <constraint firstItem="6Hb-FL-ZEO" firstAttribute="top" secondItem="oK9-lI-2he" secondAttribute="bottom" constant="23" id="q52-3g-NT9"/>
@@ -382,6 +401,7 @@
                     <connections>
                         <outlet property="dayTextField" destination="lfB-bz-6bk" id="kzI-hK-nJG"/>
                         <outlet property="monthTextField" destination="DXX-64-IzT" id="Upt-fj-7gJ"/>
+                        <outlet property="signupButton" destination="2lu-YQ-zR2" id="RgV-kb-bzK"/>
                         <outlet property="zipcodeTextField" destination="6Hb-FL-ZEO" id="hIV-EX-bky"/>
                     </connections>
                 </viewController>

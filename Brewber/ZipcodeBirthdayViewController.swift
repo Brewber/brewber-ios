@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ZipcodeBirthdayViewController: UIViewController {
+class ZipcodeBirthdayViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var zipcodeTextField: UITextField!
     @IBOutlet var dayTextField: UITextField!
     @IBOutlet var monthTextField: UITextField!
+    @IBOutlet var signupButton: UIButton!
     
     var modelViewController: ViewController!
     
@@ -20,14 +21,52 @@ class ZipcodeBirthdayViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.gray246Color()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.dayTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: .EditingChanged)
+        self.dayTextField.delegate = self
+        self.monthTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: .EditingChanged)
+        self.monthTextField.delegate = self
+        self.zipcodeTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: .EditingChanged)
+        self.zipcodeTextField.delegate = self
+        
+        self.signupButton.layer.cornerRadius = 5
+        self.signupButton.clipsToBounds = true
     }
     
-
+    func textFieldDidChange(sender: UITextField) {
+        if (self.monthTextField.isFirstResponder()) {
+            if (self.monthTextField.text?.characters.count >= 2) {
+                self.dayTextField.becomeFirstResponder()
+            }
+        }
+        else if (self.dayTextField.isFirstResponder()) {
+            if (self.dayTextField.text?.characters.count >= 2) {
+                self.zipcodeTextField.becomeFirstResponder()
+            }
+        }
+        else if (self.zipcodeTextField.isFirstResponder()) {
+            if (self.zipcodeTextField.text?.characters.count >= 5) {
+                self.zipcodeTextField.resignFirstResponder()
+            }
+        }
+    }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        if (range.length + range.location > textField.text?.characters.count) {
+            return false
+        }
+        
+        let newLength: Int = (textField.text?.characters.count)! + string.characters.count - range.length
+        if (textField == self.zipcodeTextField) {
+            return newLength <= 5
+        }
+        else {
+            return newLength <= 2
+        }
+    }
+    
+    @IBAction func signupButtonPressed(sender: AnyObject) {
+        
+    }
     /*
     // MARK: - Navigation
 
