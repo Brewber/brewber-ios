@@ -10,6 +10,7 @@ import UIKit
 
 class TestViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet var errorLabel: UILabel!
     var pageViewController: UIPageViewController!
     var firstViewController: ContentViewController!
     var modelViewController: ViewController!
@@ -28,6 +29,7 @@ class TestViewController: UIViewController, UITextFieldDelegate {
         self.passwordTextField.delegate = self
         self.usernameTextField.addTarget(self, action: "textfieldDidChange:", forControlEvents: .EditingChanged)
         self.usernameTextField.delegate = self
+        self.errorLabel.hidden = true
     }
 
     func setupContinueButton() {
@@ -49,12 +51,29 @@ class TestViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textfieldDidChange(sender: UITextField) {
-        if (self.passwordTextField.text?.characters.count != nil && self.usernameTextField.text?.characters.count != nil) {
-            self.continueButtonEnabled(true)
+        var enableContinueButton: Bool = false
+        if (self.passwordTextField.text?.characters.count > 0 &&
+            self.usernameTextField.text?.characters.count > 0) {
+            enableContinueButton = true
         }
+        self.continueButtonEnabled(enableContinueButton)
     }
     
     @IBAction func continueButtonPressed(sender: AnyObject) {
-        self.modelViewController.moveToViewControllerAtIndex(2, pageDirection: .Forward)
+        let username = self.usernameTextField.text
+        let password = self.passwordTextField.text
+        if (username?.isValidEmail() == true) {
+            if (password?.isValidPassword() == true) {
+                self.modelViewController.moveToViewControllerAtIndex(2, pageDirection: .Forward)
+            }
+            else {
+                self.errorLabel.text = "Password must be more than 7 characters"
+                self.errorLabel.hidden = false
+            }
+        }
+        else {
+            self.errorLabel.text = "Please enter a valid email address"
+            self.errorLabel.hidden = false
+        }
     }
 }

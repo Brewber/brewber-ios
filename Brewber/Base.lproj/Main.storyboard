@@ -143,7 +143,7 @@
                                     <constraint firstAttribute="height" constant="30" id="95E-O8-y9x"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Your Profile" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPN-na-Ehk">
                                 <rect key="frame" x="133" y="152" width="334" height="55"/>
@@ -167,25 +167,36 @@
                                     <action selector="continueButtonPressed:" destination="nhz-CC-VBH" eventType="touchUpInside" id="EDh-qi-huF"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7o-aj-nGf">
+                                <rect key="frame" x="181" y="376" width="238" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TU5-kq-Wo2" firstAttribute="centerX" secondItem="Wms-3g-ksV" secondAttribute="centerX" id="0wM-Hy-feq"/>
+                            <constraint firstItem="L7o-aj-nGf" firstAttribute="trailing" secondItem="77u-vU-a3r" secondAttribute="trailing" id="3hk-1f-qyt"/>
                             <constraint firstItem="TU5-kq-Wo2" firstAttribute="top" secondItem="3HA-oG-P47" secondAttribute="bottom" id="7Pr-uP-Dpv"/>
                             <constraint firstItem="77u-vU-a3r" firstAttribute="trailing" secondItem="TU5-kq-Wo2" secondAttribute="trailing" id="AXB-DP-bKI"/>
                             <constraint firstItem="XPN-na-Ehk" firstAttribute="top" secondItem="9fC-dL-IPF" secondAttribute="bottom" constant="88" id="FJO-Hg-1iM"/>
                             <constraint firstItem="TU5-kq-Wo2" firstAttribute="trailing" secondItem="3HA-oG-P47" secondAttribute="trailing" id="LuU-fI-NO4"/>
                             <constraint firstItem="3HA-oG-P47" firstAttribute="leading" secondItem="TU5-kq-Wo2" secondAttribute="leading" id="Nmt-L1-1YM"/>
+                            <constraint firstItem="foA-No-dKe" firstAttribute="top" secondItem="L7o-aj-nGf" secondAttribute="bottom" constant="182" id="T8Q-3x-2P5"/>
                             <constraint firstItem="XPN-na-Ehk" firstAttribute="centerX" secondItem="3HA-oG-P47" secondAttribute="centerX" id="aGh-fl-Itr"/>
                             <constraint firstItem="foA-No-dKe" firstAttribute="top" secondItem="77u-vU-a3r" secondAttribute="bottom" constant="232" id="b4U-qo-8av"/>
                             <constraint firstItem="77u-vU-a3r" firstAttribute="top" secondItem="TU5-kq-Wo2" secondAttribute="bottom" constant="40" id="f36-Zz-BBg"/>
+                            <constraint firstItem="L7o-aj-nGf" firstAttribute="top" secondItem="77u-vU-a3r" secondAttribute="bottom" constant="8" symbolic="YES" id="irw-bV-1hR"/>
                             <constraint firstItem="3HA-oG-P47" firstAttribute="top" secondItem="XPN-na-Ehk" secondAttribute="bottom" constant="31" id="mOn-e9-dyO"/>
+                            <constraint firstItem="L7o-aj-nGf" firstAttribute="leading" secondItem="77u-vU-a3r" secondAttribute="leading" id="pBD-nG-1S1"/>
                             <constraint firstItem="77u-vU-a3r" firstAttribute="leading" secondItem="TU5-kq-Wo2" secondAttribute="leading" id="rHP-W4-R1n"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="continueButton" destination="77u-vU-a3r" id="PLD-76-pLt"/>
+                        <outlet property="errorLabel" destination="L7o-aj-nGf" id="Vjg-8j-LWF"/>
                         <outlet property="passwordTextField" destination="TU5-kq-Wo2" id="oIB-ss-osR"/>
                         <outlet property="usernameTextField" destination="3HA-oG-P47" id="WfC-qb-9G5"/>
                     </connections>

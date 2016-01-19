@@ -19,6 +19,7 @@
 		C3A0F8F51C4C94BE00E7A23E /* UIColor+BrewberThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F8F41C4C94BE00E7A23E /* UIColor+BrewberThemes.swift */; };
 		C3A0F9251C4D795D00E7A23E /* PhoneVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F9241C4D795D00E7A23E /* PhoneVerificationViewController.swift */; };
 		C3A0F9271C4D91F500E7A23E /* ZipcodeBirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F9261C4D91F500E7A23E /* ZipcodeBirthdayViewController.swift */; };
+		C3A0F9291C4DF47800E7A23E /* NSString+BrewberAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F9281C4DF47800E7A23E /* NSString+BrewberAdditions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		C3A0F8F41C4C94BE00E7A23E /* UIColor+BrewberThemes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+BrewberThemes.swift"; sourceTree = "<group>"; };
 		C3A0F9241C4D795D00E7A23E /* PhoneVerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewController.swift; sourceTree = "<group>"; };
 		C3A0F9261C4D91F500E7A23E /* ZipcodeBirthdayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipcodeBirthdayViewController.swift; sourceTree = "<group>"; };
+		C3A0F9281C4DF47800E7A23E /* NSString+BrewberAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+BrewberAdditions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +93,7 @@
 			children = (
 				C3A0F86A1C449E5800E7A23E /* AppDelegate.swift */,
 				C3A0F88A1C48C51B00E7A23E /* AppStartViewController.swift */,
-				C3A0F8F41C4C94BE00E7A23E /* UIColor+BrewberThemes.swift */,
+				C3A0F92A1C4DF48000E7A23E /* Categories */,
 				C3A0F86E1C449E5800E7A23E /* Main.storyboard */,
 				C3A0F9261C4D91F500E7A23E /* ZipcodeBirthdayViewController.swift */,
 				C3A0F9241C4D795D00E7A23E /* PhoneVerificationViewController.swift */,
@@ -112,6 +114,15 @@
 				C3A0F8811C449E5800E7A23E /* Info.plist */,
 			);
 			path = BrewberTests;
+			sourceTree = "<group>";
+		};
+		C3A0F92A1C4DF48000E7A23E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C3A0F8F41C4C94BE00E7A23E /* UIColor+BrewberThemes.swift */,
+				C3A0F9281C4DF47800E7A23E /* NSString+BrewberAdditions.swift */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +231,7 @@
 				C3A0F9251C4D795D00E7A23E /* PhoneVerificationViewController.swift in Sources */,
 				C3A0F9271C4D91F500E7A23E /* ZipcodeBirthdayViewController.swift in Sources */,
 				C3A0F8931C49FB9700E7A23E /* ViewController.swift in Sources */,
+				C3A0F9291C4DF47800E7A23E /* NSString+BrewberAdditions.swift in Sources */,
 				C3A0F88B1C48C51B00E7A23E /* AppStartViewController.swift in Sources */,
 				C3A0F8F51C4C94BE00E7A23E /* UIColor+BrewberThemes.swift in Sources */,
 				C3A0F86B1C449E5800E7A23E /* AppDelegate.swift in Sources */,
