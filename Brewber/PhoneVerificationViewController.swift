@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhoneVerificationViewController: UIViewController {
+class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var codeTextField: UITextField!
     @IBOutlet var fourNumberField: UITextField!
@@ -21,6 +21,13 @@ class PhoneVerificationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.areaCodeField.addTarget(self, action: "textFieldDidChange:", forControlEvents: .EditingChanged)
+        self.areaCodeField.delegate = self
+        self.threeNumberField.addTarget(self, action: "textFieldDidChange:", forControlEvents: .EditingChanged)
+        self.threeNumberField.delegate = self
+        self.fourNumberField.addTarget(self, action: "textFieldDidChange:", forControlEvents: .EditingChanged)
+        self.fourNumberField.delegate = self
         
         self.view.backgroundColor = UIColor.gray246Color()
         self.sendCodeButton.layer.cornerRadius = 5
@@ -43,14 +50,41 @@ class PhoneVerificationViewController: UIViewController {
         self.modelViewController.moveToViewControllerAtIndex(3, pageDirection: .Forward)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: - TextField Customization
+    
+    func textFieldDidChange(sender: UITextField) {
+        if (self.areaCodeField.isFirstResponder()) {
+            if (self.areaCodeField.text?.characters.count >= 3) {
+                self.threeNumberField.becomeFirstResponder()
+            }
+        }
+        else if (self.threeNumberField.isFirstResponder()) {
+            if (self.threeNumberField.text?.characters.count >= 3) {
+                self.fourNumberField.becomeFirstResponder()
+            }
+        }
+        else if (self.fourNumberField.isFirstResponder()) {
+            if (self.fourNumberField.text?.characters.count >= 4) {
+                self.fourNumberField.resignFirstResponder()
+            }
+        }
     }
-    */
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        if (range.length + range.location > textField.text?.characters.count) {
+            return false
+        }
+        
+        let newLength: Int = (textField.text?.characters.count)! + string.characters.count - range.length
+        if (textField == self.fourNumberField) {
+            return newLength <= 4
+        }
+        else if (textField == self.codeTextField) {
+            return newLength <= 6
+        }
+        else {
+            return newLength <= 3
+        }
+    }
 
 }
