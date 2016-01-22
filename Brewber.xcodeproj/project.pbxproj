@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABED25E3599F10FDBF77A0F7 /* Pods_Brewber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B26190AB138A01FFDB001E /* Pods_Brewber.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C3A0F86B1C449E5800E7A23E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F86A1C449E5800E7A23E /* AppDelegate.swift */; };
 		C3A0F8701C449E5800E7A23E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A0F86E1C449E5800E7A23E /* Main.storyboard */; };
 		C3A0F8721C449E5800E7A23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3A0F8711C449E5800E7A23E /* Assets.xcassets */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		79B26190AB138A01FFDB001E /* Pods_Brewber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brewber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91EE81DF64E8E520F80295C1 /* Pods-Brewber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brewber.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brewber/Pods-Brewber.release.xcconfig"; sourceTree = "<group>"; };
 		C3A0F8671C449E5800E7A23E /* Brewber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brewber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A0F86A1C449E5800E7A23E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3A0F86F1C449E5800E7A23E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 		C3A0F9311C51E3D900E7A23E /* NetworkRequestItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestItem.swift; sourceTree = "<group>"; };
 		C3A0F9341C51EC5100E7A23E /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
 		C3A0F9361C51F6EA00E7A23E /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
+		E4EE8E2F6D16EAC1BC145871 /* Pods-Brewber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brewber.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Brewber/Pods-Brewber.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABED25E3599F10FDBF77A0F7 /* Pods_Brewber.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +85,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EA8B3493950D602C0FD9A60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79B26190AB138A01FFDB001E /* Pods_Brewber.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C3A0F85E1C449E5800E7A23E = {
 			isa = PBXGroup;
 			children = (
 				C3A0F8691C449E5800E7A23E /* Brewber */,
 				C3A0F87E1C449E5800E7A23E /* BrewberTests */,
 				C3A0F8681C449E5800E7A23E /* Products */,
+				F1EE7E78763E692E9A5E8EF0 /* Pods */,
+				2EA8B3493950D602C0FD9A60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +163,15 @@
 			name = Networking;
 			sourceTree = "<group>";
 		};
+		F1EE7E78763E692E9A5E8EF0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4EE8E2F6D16EAC1BC145871 /* Pods-Brewber.debug.xcconfig */,
+				91EE81DF64E8E520F80295C1 /* Pods-Brewber.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,9 +179,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3A0F8841C449E5800E7A23E /* Build configuration list for PBXNativeTarget "Brewber" */;
 			buildPhases = (
+				8CD496F9BB3112CD8926065E /* Check Pods Manifest.lock */,
 				C3A0F8631C449E5800E7A23E /* Sources */,
 				C3A0F8641C449E5800E7A23E /* Frameworks */,
 				C3A0F8651C449E5800E7A23E /* Resources */,
+				19F87FBD7A10B2A69D34FEB5 /* Embed Pods Frameworks */,
+				C0B87613BA07CA2ACA382C5D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,6 +271,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19F87FBD7A10B2A69D34FEB5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Brewber/Pods-Brewber-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CD496F9BB3112CD8926065E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C0B87613BA07CA2ACA382C5D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Brewber/Pods-Brewber-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C3A0F8631C449E5800E7A23E /* Sources */ = {
@@ -390,6 +465,7 @@
 		};
 		C3A0F8851C449E5800E7A23E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EE8E2F6D16EAC1BC145871 /* Pods-Brewber.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -402,6 +478,7 @@
 		};
 		C3A0F8861C449E5800E7A23E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91EE81DF64E8E520F80295C1 /* Pods-Brewber.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -455,6 +532,7 @@
 				C3A0F8861C449E5800E7A23E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C3A0F8871C449E5800E7A23E /* Build configuration list for PBXNativeTarget "BrewberTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +541,7 @@
 				C3A0F8891C449E5800E7A23E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
