@@ -21,6 +21,10 @@
 		C3A0F9291C4DF47800E7A23E /* NSString+BrewberAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F9281C4DF47800E7A23E /* NSString+BrewberAdditions.swift */; };
 		C3A0F92C1C4F3E6900E7A23E /* BrewberUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F92B1C4F3E6900E7A23E /* BrewberUser.swift */; };
 		C3A0F92E1C4F4AC400E7A23E /* BrewberAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F92D1C4F4AC400E7A23E /* BrewberAuth.swift */; };
+		C3A0F9301C51E2E800E7A23E /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F92F1C51E2E800E7A23E /* NetworkClient.swift */; };
+		C3A0F9321C51E3D900E7A23E /* NetworkRequestItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F9311C51E3D900E7A23E /* NetworkRequestItem.swift */; };
+		C3A0F9351C51EC5100E7A23E /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F9341C51EC5100E7A23E /* NetworkResponse.swift */; };
+		C3A0F9371C51F6EA00E7A23E /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F9361C51F6EA00E7A23E /* NetworkOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,10 @@
 		C3A0F9281C4DF47800E7A23E /* NSString+BrewberAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+BrewberAdditions.swift"; sourceTree = "<group>"; };
 		C3A0F92B1C4F3E6900E7A23E /* BrewberUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrewberUser.swift; sourceTree = "<group>"; };
 		C3A0F92D1C4F4AC400E7A23E /* BrewberAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrewberAuth.swift; sourceTree = "<group>"; };
+		C3A0F92F1C51E2E800E7A23E /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		C3A0F9311C51E3D900E7A23E /* NetworkRequestItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestItem.swift; sourceTree = "<group>"; };
+		C3A0F9341C51EC5100E7A23E /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		C3A0F9361C51F6EA00E7A23E /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,7 @@
 				C3A0F88A1C48C51B00E7A23E /* AppStartViewController.swift */,
 				C3A0F92A1C4DF48000E7A23E /* Categories */,
 				C3A0F86E1C449E5800E7A23E /* Main.storyboard */,
+				C3A0F9331C51E3E000E7A23E /* Networking */,
 				C3A0F9261C4D91F500E7A23E /* ZipcodeBirthdayViewController.swift */,
 				C3A0F92B1C4F3E6900E7A23E /* BrewberUser.swift */,
 				C3A0F92D1C4F4AC400E7A23E /* BrewberAuth.swift */,
@@ -126,6 +135,17 @@
 				C3A0F9281C4DF47800E7A23E /* NSString+BrewberAdditions.swift */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		C3A0F9331C51E3E000E7A23E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C3A0F92F1C51E2E800E7A23E /* NetworkClient.swift */,
+				C3A0F9361C51F6EA00E7A23E /* NetworkOperation.swift */,
+				C3A0F9311C51E3D900E7A23E /* NetworkRequestItem.swift */,
+				C3A0F9341C51EC5100E7A23E /* NetworkResponse.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,13 +253,17 @@
 				C3A0F92C1C4F3E6900E7A23E /* BrewberUser.swift in Sources */,
 				C3A0F8C51C4C044D00E7A23E /* EmailSignupViewController.swift in Sources */,
 				C3A0F9251C4D795D00E7A23E /* PhoneVerificationViewController.swift in Sources */,
+				C3A0F9301C51E2E800E7A23E /* NetworkClient.swift in Sources */,
 				C3A0F9271C4D91F500E7A23E /* ZipcodeBirthdayViewController.swift in Sources */,
 				C3A0F8931C49FB9700E7A23E /* SignupModel.swift in Sources */,
+				C3A0F9371C51F6EA00E7A23E /* NetworkOperation.swift in Sources */,
 				C3A0F9291C4DF47800E7A23E /* NSString+BrewberAdditions.swift in Sources */,
 				C3A0F88B1C48C51B00E7A23E /* AppStartViewController.swift in Sources */,
 				C3A0F92E1C4F4AC400E7A23E /* BrewberAuth.swift in Sources */,
+				C3A0F9321C51E3D900E7A23E /* NetworkRequestItem.swift in Sources */,
 				C3A0F8F51C4C94BE00E7A23E /* UIColor+BrewberThemes.swift in Sources */,
 				C3A0F86B1C449E5800E7A23E /* AppDelegate.swift in Sources */,
+				C3A0F9351C51EC5100E7A23E /* NetworkResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
