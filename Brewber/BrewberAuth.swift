@@ -7,6 +7,17 @@
 //
 
 import UIKit
+import Alamofire
+
+struct BrewberAuthSignup {
+    static let BrewberAuthSignupURL = "http://brewber.herokuapp.com/users"
+    struct parameter {
+        static let name = "name"
+        static let username = "username"
+        static let password = "password"
+        static let phoneNumber = "phone_number"
+    }
+}
 
 class BrewberAuth: NSObject {
     
@@ -31,7 +42,21 @@ class BrewberAuth: NSObject {
     }
     
     // STUB:
-    func signupUser(user: BrewberUser, completion: () -> (user: BrewberUser, error: NSError)) {
-        
+    func signupUser(user: BrewberUser) {
+        let parameters: [String: String] = [BrewberAuthSignup.parameter.name: "testname",
+                                            BrewberAuthSignup.parameter.username: user.email,
+                                            BrewberAuthSignup.parameter.password: user.password,
+                                            BrewberAuthSignup.parameter.phoneNumber: user.phoneNumber]
+        Alamofire.request(.POST, BrewberAuthSignup.BrewberAuthSignupURL, parameters: parameters, encoding: .JSON, headers: nil)
+            .responseJSON { (response) -> Void in
+                print(response.request)  // original URL request
+                print(response.response) // URL response
+                print(response.data)     // server data
+                print(response.result)   // result of response serialization
+                
+                if let JSON = response.result.value {
+                    print("JSON: \(JSON)")
+                }
+        }
     }
 }
