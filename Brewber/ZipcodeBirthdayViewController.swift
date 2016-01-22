@@ -15,7 +15,7 @@ class ZipcodeBirthdayViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var monthTextField: UITextField!
     @IBOutlet var signupButton: UIButton!
     
-    var modelViewController: ViewController!
+    var signupModel: SignupModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

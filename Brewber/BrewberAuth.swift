@@ -31,7 +31,7 @@ class BrewberAuth: NSObject {
     }
     
     // STUB:
-    func signupUser(user: BrewberUser) {
+    func signupUser(user: BrewberUser, completion: () -> (user: BrewberUser, error: NSError)) {
         
     }
 }

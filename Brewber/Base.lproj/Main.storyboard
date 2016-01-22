@@ -16,10 +16,10 @@
             </objects>
             <point key="canvasLocation" x="2025" y="-180"/>
         </scene>
-        <!--View Controller-->
+        <!--Signup Model-->
         <scene sceneID="Io8-JY-p4q">
             <objects>
-                <viewController id="OOa-6B-9zk" customClass="ViewController" customModule="Brewber" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OOa-6B-9zk" customClass="SignupModel" customModule="Brewber" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bd5-u3-ZMh"/>
                         <viewControllerLayoutGuide type="bottom" id="iHy-Ko-bgd"/>
@@ -30,91 +30,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Y1q-9n-LkS"/>
-                    <connections>
-                        <segue destination="nUv-QP-RMc" kind="show" id="aT5-bL-zN1"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fr-fm-ge1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2358" y="651"/>
-        </scene>
-        <!--Content View Controller-->
-        <scene sceneID="4Dd-en-oiO">
-            <objects>
-                <viewController storyboardIdentifier="ContentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nUv-QP-RMc" customClass="ContentViewController" customModule="Brewber" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4DK-wq-p24"/>
-                        <viewControllerLayoutGuide type="bottom" id="RZE-Vm-75d"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="f79-fd-L7m">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sign up with facebook to see who your friends are sending drinks too - Don't be the last to send Johnny his bday daiquiri" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GuU-sd-chW">
-                                <rect key="frame" x="122" y="101" width="356" height="76"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="356" id="ucU-rX-2cC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIY-BD-B8M">
-                                <rect key="frame" x="200" y="185" width="201" height="37"/>
-                                <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="201" id="ssY-9z-R3C"/>
-                                </constraints>
-                                <state key="normal" title="Sign up with Facebook">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="facebookButtonPressed:" destination="nUv-QP-RMc" eventType="touchUpInside" id="zYY-PW-4zk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQ1-ft-l8T">
-                                <rect key="frame" x="200" y="329" width="201" height="37"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <state key="normal" title="Sign up with Email">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="emailButtonPressed:" destination="nUv-QP-RMc" eventType="touchUpInside" id="4fM-nV-HUO"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Or sign up with email instead - you will have the option to connect to social at any time" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHX-DB-7Ya">
-                                <rect key="frame" x="122" y="268" width="356" height="53"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="GuU-sd-chW" firstAttribute="top" secondItem="4DK-wq-p24" secondAttribute="bottom" constant="37" id="55F-IZ-bsR"/>
-                            <constraint firstItem="WHX-DB-7Ya" firstAttribute="top" secondItem="QIY-BD-B8M" secondAttribute="bottom" constant="46" id="6mZ-ru-Nfv"/>
-                            <constraint firstItem="WHX-DB-7Ya" firstAttribute="centerX" secondItem="f79-fd-L7m" secondAttribute="centerX" id="AAa-Pi-Xfo"/>
-                            <constraint firstItem="XQ1-ft-l8T" firstAttribute="centerX" secondItem="f79-fd-L7m" secondAttribute="centerX" id="JFH-n0-YSF"/>
-                            <constraint firstItem="QIY-BD-B8M" firstAttribute="top" secondItem="GuU-sd-chW" secondAttribute="bottom" constant="8" id="MqF-dk-LGh"/>
-                            <constraint firstItem="QIY-BD-B8M" firstAttribute="centerX" secondItem="f79-fd-L7m" secondAttribute="centerX" id="VAi-nB-Zxg"/>
-                            <constraint firstItem="XQ1-ft-l8T" firstAttribute="width" secondItem="QIY-BD-B8M" secondAttribute="width" id="Wqk-F2-YUu"/>
-                            <constraint firstItem="XQ1-ft-l8T" firstAttribute="leading" secondItem="QIY-BD-B8M" secondAttribute="leading" id="gOn-GW-8oT"/>
-                            <constraint firstItem="XQ1-ft-l8T" firstAttribute="top" secondItem="WHX-DB-7Ya" secondAttribute="bottom" constant="8" id="jN4-xY-1kB"/>
-                            <constraint firstItem="WHX-DB-7Ya" firstAttribute="width" secondItem="GuU-sd-chW" secondAttribute="width" id="mHF-3m-ztK"/>
-                            <constraint firstItem="GuU-sd-chW" firstAttribute="centerX" secondItem="f79-fd-L7m" secondAttribute="centerX" id="oVC-86-ESS"/>
-                            <constraint firstItem="WHX-DB-7Ya" firstAttribute="leading" secondItem="GuU-sd-chW" secondAttribute="leading" id="qgL-hA-C8B"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="emailButton" destination="XQ1-ft-l8T" id="RI9-LT-zo4"/>
-                        <outlet property="emailLabel" destination="WHX-DB-7Ya" id="GBs-Dj-KAL"/>
-                        <outlet property="facebookButton" destination="QIY-BD-B8M" id="mIl-Dq-YGI"/>
-                        <outlet property="facebookLabel" destination="GuU-sd-chW" id="5Wm-lf-28F"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lS5-ap-foR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3034" y="651"/>
         </scene>
         <!--Test View Controller-->
         <scene sceneID="kwZ-k2-dQH">
@@ -203,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TRD-Ld-FNP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3757" y="651"/>
+            <point key="canvasLocation" x="3076" y="651"/>
         </scene>
         <!--Phone Verification View Controller-->
         <scene sceneID="iB0-mn-BgD">
@@ -320,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WJ4-vf-PEV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4416" y="651"/>
+            <point key="canvasLocation" x="3728" y="651"/>
         </scene>
         <!--Zipcode Birthday View Controller-->
         <scene sceneID="wn1-tr-P1m">
@@ -418,7 +337,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4D-9X-Iye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5052" y="651"/>
+            <point key="canvasLocation" x="4364" y="651"/>
         </scene>
         <!--App Start View Controller-->
         <scene sceneID="tne-QT-ifu">

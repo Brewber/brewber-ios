@@ -17,7 +17,7 @@ class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var sendCodeButton: UIButton!
     @IBOutlet var verifyButton: UIButton!
     
-    var modelViewController: ViewController!
+    var signupModel: SignupModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func VerifyButtonPressed(sender: AnyObject) {
-        self.modelViewController.moveToViewControllerAtIndex(3, pageDirection: .Forward)
+        self.signupModel.moveToViewControllerAtIndex(Signup.Paging.ZipcodeEntryViewControllerIndex, pageDirection: .Forward)
     }
     
     // MARK: - TextField Customization

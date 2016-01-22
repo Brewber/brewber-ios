@@ -12,8 +12,7 @@ class TestViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var errorLabel: UILabel!
     var pageViewController: UIPageViewController!
-    var firstViewController: ContentViewController!
-    var modelViewController: ViewController!
+    var signupModel: SignupModel!
 
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var usernameTextField: UITextField!
@@ -64,7 +63,7 @@ class TestViewController: UIViewController, UITextFieldDelegate {
         let password = self.passwordTextField.text
         if (username?.isValidEmail() == true) {
             if (password?.isValidPassword() == true) {
-                self.modelViewController.moveToViewControllerAtIndex(2, pageDirection: .Forward)
+                self.signupModel.moveToViewControllerAtIndex(Signup.Paging.PhoneVerificationViewControllerIndex, pageDirection: .Forward)
             }
             else {
                 self.errorLabel.text = "Password must be more than 7 characters"
