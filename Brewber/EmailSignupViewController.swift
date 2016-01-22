@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TestViewController: UIViewController, UITextFieldDelegate {
+class EmailSignupViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var errorLabel: UILabel!
     var pageViewController: UIPageViewController!

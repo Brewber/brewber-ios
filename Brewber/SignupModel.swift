@@ -35,7 +35,7 @@ class SignupModel: UIViewController, UIPageViewControllerDataSource {
     func setupPageViewController() {
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
         self.pageViewController.dataSource = self
-        let startVC = self.viewControllerAtIndex(Signup.Paging.EmailSignupViewControllerIndex) as! TestViewController
+        let startVC = self.viewControllerAtIndex(Signup.Paging.EmailSignupViewControllerIndex) as! EmailSignupViewController
         let viewControllers = NSArray(object: startVC) as! [UIViewController]
         self.pageViewController.setViewControllers(viewControllers, direction: .Forward, animated: true, completion: nil)
         self.pageViewController.view.frame = CGRectMake(0, 30, self.view.frame.width, self.view.frame.size.height - pageControlOffset)
@@ -86,7 +86,7 @@ class SignupModel: UIViewController, UIPageViewControllerDataSource {
     
     func viewControllerAtIndex(index: Int) -> UIViewController {
         if (index == Signup.Paging.EmailSignupViewControllerIndex) {
-            let vc: TestViewController = self.storyboard?.instantiateViewControllerWithIdentifier("TestViewController") as! TestViewController
+            let vc: EmailSignupViewController = self.storyboard?.instantiateViewControllerWithIdentifier("EmailSignupViewController") as! EmailSignupViewController
             vc.signupModel = self
             return vc
         }
@@ -102,12 +102,12 @@ class SignupModel: UIViewController, UIPageViewControllerDataSource {
         }
         else {
             print("Incorrect index \(index)")
-            return TestViewController()
+            return EmailSignupViewController()
         }
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        if (viewController.isKindOfClass(TestViewController)) {
+        if (viewController.isKindOfClass(EmailSignupViewController)) {
             return nil
         }
         else if (viewController.isKindOfClass(PhoneVerificationViewController)) {
@@ -120,7 +120,7 @@ class SignupModel: UIViewController, UIPageViewControllerDataSource {
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        if (viewController.isKindOfClass(TestViewController)) {
+        if (viewController.isKindOfClass(EmailSignupViewController)) {
             return self.viewControllerAtIndex(Signup.Paging.PhoneVerificationViewControllerIndex)
         }
         else if (viewController.isKindOfClass(PhoneVerificationViewController)) {
@@ -138,7 +138,7 @@ class SignupModel: UIViewController, UIPageViewControllerDataSource {
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
         let viewController: UIViewController = self.pageViewController.viewControllers![0]
-        if (viewController.isKindOfClass(TestViewController)) {
+        if (viewController.isKindOfClass(EmailSignupViewController)) {
             return Signup.Paging.EmailSignupViewControllerIndex
         }
         else if (viewController.isKindOfClass(PhoneVerificationViewController)) {

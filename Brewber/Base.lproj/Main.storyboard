@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="2358" y="651"/>
         </scene>
-        <!--Test View Controller-->
+        <!--Email Signup View Controller-->
         <scene sceneID="kwZ-k2-dQH">
             <objects>
-                <viewController storyboardIdentifier="TestViewController" id="nhz-CC-VBH" customClass="TestViewController" customModule="Brewber" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmailSignupViewController" id="nhz-CC-VBH" customClass="EmailSignupViewController" customModule="Brewber" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9fC-dL-IPF"/>
                         <viewControllerLayoutGuide type="bottom" id="foA-No-dKe"/>
