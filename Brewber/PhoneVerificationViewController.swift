@@ -42,12 +42,17 @@ class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
     // MARK: - IBAction's
         
     @IBAction func sendCodeButtonPressed(sender: AnyObject) {
+        // TODO: Check if its a valid phone number
+        
         self.verifyButton.hidden = false
         self.codeTextField.hidden = false
+        
+        // TODO: Send verification code
     }
     
     @IBAction func VerifyButtonPressed(sender: AnyObject) {
-        self.signupModel.moveToViewControllerAtIndex(Signup.Paging.ZipcodeEntryViewControllerIndex, pageDirection: .Forward)
+        // TODO: Verify that correct code was received
+        self.proceedAndRegisterPhoneNumber(self.phoneNumberString())
     }
     
     // MARK: - TextField Customization
@@ -85,6 +90,18 @@ class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
         else {
             return newLength <= 3
         }
+    }
+    
+    func phoneNumberString() -> String {
+        let areaCode: String = areaCodeField.text!
+        let threeNumbers: String = threeNumberField.text!
+        let fourNumbers: String = fourNumberField.text!
+        return "\(areaCode)\(threeNumbers)\(fourNumbers)"
+    }
+    
+    func proceedAndRegisterPhoneNumber(phoneNumber: String) {
+        self.signupModel.newUser.phoneNumber = phoneNumber
+        self.signupModel.moveToViewControllerAtIndex(Signup.Paging.ZipcodeEntryViewControllerIndex, pageDirection: .Forward)
     }
 
 }

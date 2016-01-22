@@ -63,7 +63,7 @@ class EmailSignupViewController: UIViewController, UITextFieldDelegate {
         let password = self.passwordTextField.text
         if (username?.isValidEmail() == true) {
             if (password?.isValidPassword() == true) {
-                self.signupModel.moveToViewControllerAtIndex(Signup.Paging.PhoneVerificationViewControllerIndex, pageDirection: .Forward)
+                self.proceedAndRegisterUserEmail(username!, password: password!)
             }
             else {
                 self.errorLabel.text = "Password must be more than 7 characters"
@@ -74,5 +74,11 @@ class EmailSignupViewController: UIViewController, UITextFieldDelegate {
             self.errorLabel.text = "Please enter a valid email address"
             self.errorLabel.hidden = false
         }
+    }
+    
+    func proceedAndRegisterUserEmail(email: String, password: String) {
+        self.signupModel.newUser.email = email
+        self.signupModel.newUser.password = password
+        self.signupModel.moveToViewControllerAtIndex(Signup.Paging.PhoneVerificationViewControllerIndex, pageDirection: .Forward)
     }
 }

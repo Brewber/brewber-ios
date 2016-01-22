@@ -22,6 +22,7 @@ class SignupModel: UIViewController, UIPageViewControllerDataSource {
     
     let pageControlOffset: CGFloat = 40
     var pageViewController: UIPageViewController!
+    var newUser: BrewberUser!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,7 @@ class SignupModel: UIViewController, UIPageViewControllerDataSource {
         self.disablePageScrolling()
         self.setupPageControl()
         self.view.backgroundColor = UIColor.gray246Color()
+        self.newUser = BrewberUser()
     }
     
     func setupPageViewController() {
@@ -47,7 +49,7 @@ class SignupModel: UIViewController, UIPageViewControllerDataSource {
     func setupNavigationBar() {
         self.navigationController!.navigationBar.barTintColor = UIColor.vividRedColor()
         self.navigationController?.navigationBar.topItem?.title = "Sign Up"
-        let closeButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Stop, target: self, action: "doneButtonPressed")
+        let closeButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Stop, target: self, action: "closeButtonPressed")
         closeButton.tintColor = UIColor.whiteColor()
         self.navigationItem.leftBarButtonItem = closeButton
         self.navigationController?.navigationBar.translucent = false
@@ -56,7 +58,8 @@ class SignupModel: UIViewController, UIPageViewControllerDataSource {
         self.navigationController?.navigationBar.titleTextAttributes = titleTextAttributes
     }
     
-    func doneButtonPressed() {
+    func closeButtonPressed() {
+        self.newUser = nil
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     

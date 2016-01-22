@@ -15,6 +15,9 @@ class ZipcodeBirthdayViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var monthTextField: UITextField!
     @IBOutlet var signupButton: UIButton!
     
+    let invalidBirthdayMessage = "Invalid birthday, please enter a valid birthday"
+    let invalidZipcodeMessage = "Invalid zipcode, please enter a valid zipcode"
+    
     var signupModel: SignupModel!
     
     override func viewDidLoad() {
@@ -65,9 +68,46 @@ class ZipcodeBirthdayViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func signupButtonPressed(sender: AnyObject) {
+        let zipcode: String = zipcodeTextField.text!
+        let birthMonth: String = monthTextField.text!
+        let birthDay: String = dayTextField.text!
         
+        if (!self.isValidBirthday(birthMonth, day: birthDay)) {
+            // Display Birthday error
+        }
+        else if (!self.isValidZipcode(zipcode)) {
+            // Display zipcode error
+        }
+        else {
+            // signup the user
+        }
     }
-    /*
+    
+    func isValidBirthday(month: String, day: String) -> Bool {
+        var validBirthday: Bool = false
+        
+        let monthInteger: Int? = Int(month)
+        let dayInteger: Int? = Int(day)
+        
+        if (monthInteger != nil && dayInteger != nil) {
+            if (monthInteger <= 12 && dayInteger <= 31 && monthInteger >= 0 && dayInteger >= 0) {
+                validBirthday = true
+            }
+        }
+        
+        return validBirthday
+    }
+    
+    func isValidZipcode(zipcode: String) -> Bool {
+        if (zipcode.characters.count != 5) {
+            return false
+        }
+        
+        let zipcodeInteger: Int? = Int(zipcode)
+        return zipcodeInteger != nil
+    }
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -75,6 +115,6 @@ class ZipcodeBirthdayViewController: UIViewController, UITextFieldDelegate {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+
 
 }
