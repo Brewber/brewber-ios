@@ -80,6 +80,16 @@ class ZipcodeBirthdayViewController: UIViewController, UITextFieldDelegate {
         }
         else {
             // signup the user
+            BrewberAuth.authController.signupUser(self.signupModel.newUser, completion: { (success, error) -> () in
+                if (success) {
+                    self.navigateToHomeScreen()
+                }
+                else {
+                    print(error?.code)
+                    print(error?.localizedDescription)
+                    print(error?.localizedFailureReason)
+                }
+            })
         }
     }
     
@@ -109,6 +119,10 @@ class ZipcodeBirthdayViewController: UIViewController, UITextFieldDelegate {
     
     
     // MARK: - Navigation
+    
+    func navigateToHomeScreen() {
+        
+    }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

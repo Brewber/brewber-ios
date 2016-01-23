@@ -21,6 +21,8 @@ struct BrewberAuthSignup {
 
 class BrewberAuth: NSObject {
     
+    static let authController = BrewberAuth()
+    
     // STUB: - Implement when token is available - fetches user from the keychain
     class func currentUser() -> BrewberUser? {
         return nil
@@ -42,7 +44,7 @@ class BrewberAuth: NSObject {
     }
     
     // STUB:
-    func signupUser(user: BrewberUser) {
+    func signupUser(user: BrewberUser, completion:((success: Bool, error: NSError?)->())) {
         let parameters: [String: String] = [BrewberAuthSignup.parameter.name: "testname",
                                             BrewberAuthSignup.parameter.username: user.email,
                                             BrewberAuthSignup.parameter.password: user.password,
@@ -54,8 +56,11 @@ class BrewberAuth: NSObject {
                 print(response.data)     // server data
                 print(response.result)   // result of response serialization
                 
+                response.result.error
+                
                 if let JSON = response.result.value {
                     print("JSON: \(JSON)")
+                    completion(success: true, error: nil)
                 }
         }
     }
