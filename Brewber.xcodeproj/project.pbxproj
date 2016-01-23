@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		ABED25E3599F10FDBF77A0F7 /* Pods_Brewber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B26190AB138A01FFDB001E /* Pods_Brewber.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C37ECD551C53F6C7004B4346 /* ContactsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37ECD541C53F6C7004B4346 /* ContactsLoader.swift */; };
+		C37ECD5B1C5421F6004B4346 /* ContactsLoaderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37ECD5A1C5421F6004B4346 /* ContactsLoaderConfiguration.swift */; };
+		C37ECD5D1C5427F9004B4346 /* UserDefaultsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37ECD5C1C5427F9004B4346 /* UserDefaultsConstants.swift */; };
 		C3A0F86B1C449E5800E7A23E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F86A1C449E5800E7A23E /* AppDelegate.swift */; };
 		C3A0F8701C449E5800E7A23E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A0F86E1C449E5800E7A23E /* Main.storyboard */; };
 		C3A0F8721C449E5800E7A23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3A0F8711C449E5800E7A23E /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 		91EE81DF64E8E520F80295C1 /* Pods-Brewber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brewber.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brewber/Pods-Brewber.release.xcconfig"; sourceTree = "<group>"; };
 		C37ECD541C53F6C7004B4346 /* ContactsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsLoader.swift; sourceTree = "<group>"; };
 		C37ECD571C540F5B004B4346 /* Brewber-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Brewber-Bridging-Header.h"; sourceTree = "<group>"; };
+		C37ECD5A1C5421F6004B4346 /* ContactsLoaderConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsLoaderConfiguration.swift; sourceTree = "<group>"; };
+		C37ECD5C1C5427F9004B4346 /* UserDefaultsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsConstants.swift; sourceTree = "<group>"; };
 		C3A0F8671C449E5800E7A23E /* Brewber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brewber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A0F86A1C449E5800E7A23E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3A0F86F1C449E5800E7A23E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				C37ECD541C53F6C7004B4346 /* ContactsLoader.swift */,
+				C37ECD5C1C5427F9004B4346 /* UserDefaultsConstants.swift */,
+				C37ECD5A1C5421F6004B4346 /* ContactsLoaderConfiguration.swift */,
 				C3A0F86A1C449E5800E7A23E /* AppDelegate.swift */,
 				C3A0F88A1C48C51B00E7A23E /* AppStartViewController.swift */,
 				C3A0F92A1C4DF48000E7A23E /* Categories */,
@@ -341,9 +347,11 @@
 				C3A0F88B1C48C51B00E7A23E /* AppStartViewController.swift in Sources */,
 				C3A0F92E1C4F4AC400E7A23E /* BrewberAuth.swift in Sources */,
 				C3A0F9321C51E3D900E7A23E /* NetworkRequestItem.swift in Sources */,
+				C37ECD5D1C5427F9004B4346 /* UserDefaultsConstants.swift in Sources */,
 				C3A0F8F51C4C94BE00E7A23E /* UIColor+BrewberThemes.swift in Sources */,
 				C3A0F86B1C449E5800E7A23E /* AppDelegate.swift in Sources */,
 				C3A0F9351C51EC5100E7A23E /* NetworkResponse.swift in Sources */,
+				C37ECD5B1C5421F6004B4346 /* ContactsLoaderConfiguration.swift in Sources */,
 				C37ECD551C53F6C7004B4346 /* ContactsLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
