@@ -5,6 +5,7 @@ use_frameworks!
 target 'Brewber' do
 
 pod 'Alamofire', '~> 3.0'
+pod 'APAddressBook/Swift', '~> 0.2'
 
 end
 
