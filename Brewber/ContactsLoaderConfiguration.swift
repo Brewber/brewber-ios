@@ -12,9 +12,20 @@ import APAddressBook
 class ContactsLoaderConfiguration: NSObject {
     
     var fieldsMask: APContactField!
-    
+    var filterBlock: APFilterContactsBlock!
+    var sortDescriptors: [NSSortDescriptor]?
     
     class func defaultConfiguration() -> ContactsLoaderConfiguration {
+        let defaultConfiguration = ContactsLoaderConfiguration()
+        defaultConfiguration.fieldsMask = [.Name, .PhonesWithLabels, .Birthday, .Thumbnail]
+        defaultConfiguration.filterBlock = { (contact: APContact) -> Bool in
+            if let phones = contact.phones {
+                return phones.count > 0
+            }
+            return false
+        }
+        defaultConfiguration.sortDescriptors = [NSSortDescriptor(key: "name.firstName", ascending: true),
+                                                NSSortDescriptor(key: "name.lastName", ascending: true)]
         return ContactsLoaderConfiguration()
     }
 }

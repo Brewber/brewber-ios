@@ -12,19 +12,21 @@ import APAddressBook
 class ContactsLoader: NSObject {
     
     let addressBook = APAddressBook()
-    var configuration: ContactsLoaderConfiguration!
     
     init(configuration: ContactsLoaderConfiguration) {
-        self.configuration = configuration
+        super.init()
+        self.setupContactsLoader(configuration)
     }
     
     override init() {
         super.init()
-        self.configuration = ContactsLoaderConfiguration.defaultConfiguration()
+        self.setupContactsLoader(ContactsLoaderConfiguration.defaultConfiguration())
     }
     
-    private func setupContactsLoaderWithConfiguration() {
-        self.addressBook.fieldsMask = self.configuration.fieldsMask
+    private func setupContactsLoader(configuration: ContactsLoaderConfiguration) {
+        self.addressBook.fieldsMask = configuration.fieldsMask
+        self.addressBook.filterBlock = configuration.filterBlock
+        self.addressBook.sortDescriptors = configuration.sortDescriptors
     }
     
     func requestAccess(completion:(Bool, NSError?) -> ()) {
