@@ -33,12 +33,7 @@ class AppStartViewController: UIViewController {
     // MARK: - Navigation
 
     @IBAction func loginButtonPressed(sender: UIButton) {
-        let user = BrewberUser()
-        user.email = "testemail"
-        user.password = "testpassword"
-        user.phoneNumber = "testnumber"
-        let authController = BrewberAuth()
-        authController.signupUser(user)
+        
     }
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
