@@ -69,7 +69,7 @@ class ContactsTableViewController: UITableViewController {
         let currentContact: APContact = self.contacts![indexPath.row]
         var nameString: String!
         if (currentContact.name != nil) {
-            nameString = self.stringForContactName(currentContact.name!)
+            nameString = currentContact.name!.compositeName
         }
         else {
             nameString = "'name' parameter is nil"
@@ -89,24 +89,5 @@ class ContactsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    // MARK: - Private Helper Methods
-    
-    private func stringForContactName(name: APName) -> String {
-        let firstname = name.firstName
-        let lastname = name.lastName
-        if (firstname != nil && lastname != nil) {
-            return "\(firstname!) \(lastname!)"
-        }
-        else if (firstname != nil) {
-            return firstname!
-        }
-        else if (lastname != nil) {
-            return lastname!
-        }
-        else {
-            return "**no name found**"
-        }
-    }
 
 }

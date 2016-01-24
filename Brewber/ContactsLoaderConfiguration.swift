@@ -24,8 +24,7 @@ class ContactsLoaderConfiguration: NSObject {
             }
             return false
         }
-        defaultConfiguration.sortDescriptors = [NSSortDescriptor(key: "name.firstName", ascending: true),
-                                                NSSortDescriptor(key: "name.lastName", ascending: true)]
+        defaultConfiguration.sortDescriptors = [NSSortDescriptor(key: "name.compositeName", ascending: true)]
         return defaultConfiguration
     }
 }
