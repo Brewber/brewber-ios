@@ -29,10 +29,7 @@ class ContactsTableViewController: UITableViewController, UISearchBarDelegate, U
         self.loadContacts()
     }
     
-    func setupNavigationBar() {
-        self.navigationController?.navigationBar.translucent = false
-        self.navigationController?.navigationBarHidden = false
-        
+    func setupNavigationBar() {        
         // fixes bug where search bar does not show up when tapped
         self.navigationController?.extendedLayoutIncludesOpaqueBars = true
     }
