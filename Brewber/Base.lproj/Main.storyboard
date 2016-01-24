@@ -437,6 +437,7 @@
                                 </state>
                                 <connections>
                                     <action selector="continueButtonPressed:" destination="nhz-CC-VBH" eventType="touchUpInside" id="BeW-f7-6Pq"/>
+                                    <segue destination="5al-fi-nwq" kind="show" id="Kud-2P-RKe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -465,17 +466,17 @@
             </objects>
             <point key="canvasLocation" x="2326" y="622"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Contacts Table View Controller-->
         <scene sceneID="004-DZ-tIQ">
             <objects>
-                <tableViewController id="5al-fi-nwq" sceneMemberID="viewController">
+                <tableViewController id="5al-fi-nwq" customClass="ContactsTableViewController" customModule="Brewber" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="COk-Xg-bd5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="RJd-iD-Ott">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RJd-iD-Ott" id="VlN-3U-SaZ">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -491,7 +492,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BN4-AS-NI6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3295" y="558"/>
+            <point key="canvasLocation" x="3036" y="622"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6E1-VF-jue">
