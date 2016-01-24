@@ -11,6 +11,8 @@
 		C37ECD551C53F6C7004B4346 /* ContactsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37ECD541C53F6C7004B4346 /* ContactsLoader.swift */; };
 		C37ECD5B1C5421F6004B4346 /* ContactsLoaderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37ECD5A1C5421F6004B4346 /* ContactsLoaderConfiguration.swift */; };
 		C37ECD5D1C5427F9004B4346 /* UserDefaultsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37ECD5C1C5427F9004B4346 /* UserDefaultsConstants.swift */; };
+		C37ECD601C54374B004B4346 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37ECD5F1C54374B004B4346 /* ContactsTableViewController.swift */; };
+		C37ECD621C546795004B4346 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37ECD611C546795004B4346 /* LoginViewController.swift */; };
 		C3A0F86B1C449E5800E7A23E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F86A1C449E5800E7A23E /* AppDelegate.swift */; };
 		C3A0F8701C449E5800E7A23E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A0F86E1C449E5800E7A23E /* Main.storyboard */; };
 		C3A0F8721C449E5800E7A23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3A0F8711C449E5800E7A23E /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 		C37ECD571C540F5B004B4346 /* Brewber-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Brewber-Bridging-Header.h"; sourceTree = "<group>"; };
 		C37ECD5A1C5421F6004B4346 /* ContactsLoaderConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsLoaderConfiguration.swift; sourceTree = "<group>"; };
 		C37ECD5C1C5427F9004B4346 /* UserDefaultsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsConstants.swift; sourceTree = "<group>"; };
+		C37ECD5F1C54374B004B4346 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		C37ECD611C546795004B4346 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C3A0F8671C449E5800E7A23E /* Brewber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brewber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A0F86A1C449E5800E7A23E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3A0F86F1C449E5800E7A23E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,6 +104,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C37ECD5E1C5434CA004B4346 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				C3A0F9261C4D91F500E7A23E /* ZipcodeBirthdayViewController.swift */,
+				C3A0F9241C4D795D00E7A23E /* PhoneVerificationViewController.swift */,
+				C3A0F8921C49FB9700E7A23E /* SignupModel.swift */,
+				C3A0F8C41C4C044D00E7A23E /* EmailSignupViewController.swift */,
+			);
+			name = Signup;
+			sourceTree = "<group>";
+		};
 		C3A0F85E1C449E5800E7A23E = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +138,7 @@
 		C3A0F8691C449E5800E7A23E /* Brewber */ = {
 			isa = PBXGroup;
 			children = (
+				C37ECD5F1C54374B004B4346 /* ContactsTableViewController.swift */,
 				C37ECD541C53F6C7004B4346 /* ContactsLoader.swift */,
 				C37ECD5C1C5427F9004B4346 /* UserDefaultsConstants.swift */,
 				C37ECD5A1C5421F6004B4346 /* ContactsLoaderConfiguration.swift */,
@@ -130,13 +146,11 @@
 				C3A0F88A1C48C51B00E7A23E /* AppStartViewController.swift */,
 				C3A0F92A1C4DF48000E7A23E /* Categories */,
 				C3A0F86E1C449E5800E7A23E /* Main.storyboard */,
+				C37ECD611C546795004B4346 /* LoginViewController.swift */,
 				C3A0F9331C51E3E000E7A23E /* Networking */,
-				C3A0F9261C4D91F500E7A23E /* ZipcodeBirthdayViewController.swift */,
+				C37ECD5E1C5434CA004B4346 /* Signup */,
 				C3A0F92B1C4F3E6900E7A23E /* BrewberUser.swift */,
 				C3A0F92D1C4F4AC400E7A23E /* BrewberAuth.swift */,
-				C3A0F9241C4D795D00E7A23E /* PhoneVerificationViewController.swift */,
-				C3A0F8921C49FB9700E7A23E /* SignupModel.swift */,
-				C3A0F8C41C4C044D00E7A23E /* EmailSignupViewController.swift */,
 				C3A0F8711C449E5800E7A23E /* Assets.xcassets */,
 				C3A0F8731C449E5800E7A23E /* LaunchScreen.storyboard */,
 				C3A0F8761C449E5800E7A23E /* Info.plist */,
@@ -340,10 +354,12 @@
 				C3A0F8C51C4C044D00E7A23E /* EmailSignupViewController.swift in Sources */,
 				C3A0F9251C4D795D00E7A23E /* PhoneVerificationViewController.swift in Sources */,
 				C3A0F9301C51E2E800E7A23E /* NetworkClient.swift in Sources */,
+				C37ECD621C546795004B4346 /* LoginViewController.swift in Sources */,
 				C3A0F9271C4D91F500E7A23E /* ZipcodeBirthdayViewController.swift in Sources */,
 				C3A0F8931C49FB9700E7A23E /* SignupModel.swift in Sources */,
 				C3A0F9371C51F6EA00E7A23E /* NetworkOperation.swift in Sources */,
 				C3A0F9291C4DF47800E7A23E /* NSString+BrewberAdditions.swift in Sources */,
+				C37ECD601C54374B004B4346 /* ContactsTableViewController.swift in Sources */,
 				C3A0F88B1C48C51B00E7A23E /* AppStartViewController.swift in Sources */,
 				C3A0F92E1C4F4AC400E7A23E /* BrewberAuth.swift in Sources */,
 				C3A0F9321C51E3D900E7A23E /* NetworkRequestItem.swift in Sources */,
