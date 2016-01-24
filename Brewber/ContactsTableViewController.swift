@@ -9,21 +9,44 @@
 import UIKit
 import APAddressBook
 
-class ContactsTableViewController: UITableViewController {
+class ContactsTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate, UISearchResultsUpdating {
     
     var contactsLoader: ContactsLoader!
     var contacts: [APContact]?
     let ContactCellIdentifier = "ContactCellIdentifier"
+    
+    var searchController: UISearchController!
+    var filteredContacts: [APContact]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Send To..."
+        self.contacts = []
+        self.filteredContacts = []
+        self.setupNavigationBar()
+        self.setupSearchBar()
         self.contactsLoader = ContactsLoader(configuration: ContactsLoaderConfiguration.defaultConfiguration())
         self.loadContacts()
     }
     
     func setupNavigationBar() {
+        self.navigationController?.navigationBar.translucent = false
+        self.navigationController?.navigationBarHidden = false
         
+        // fixes bug where search bar does not show up when tapped
+        self.navigationController?.extendedLayoutIncludesOpaqueBars = true
+    }
+    
+    func setupSearchBar() {
+        self.searchController = UISearchController(searchResultsController: nil)
+        self.searchController.searchResultsUpdater = self
+        self.searchController.searchBar.sizeToFit()
+        self.tableView.tableHeaderView = self.searchController.searchBar
+        self.searchController.searchBar.barTintColor = UIColor.whiteColor()
+        
+        // this 1px border around searchbar
+        self.searchController.searchBar.layer.borderColor = UIColor.whiteColor().CGColor
+        self.searchController.searchBar.layer.borderWidth = 1
     }
     
     func loadContacts() {
@@ -57,16 +80,24 @@ class ContactsTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (contacts != nil && contacts?.count != 0) {
-            return contacts!.count
+        if (self.searchController.active) {
+            return self.filteredContacts!.count
         }
-        return 0
+        else {
+            return self.contacts!.count
+        }
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(ContactCellIdentifier, forIndexPath: indexPath)
-        let currentContact: APContact = self.contacts![indexPath.row]
+        var currentContact: APContact!
+        if (self.searchController.active) {
+            currentContact = self.filteredContacts![indexPath.row]
+        }
+        else {
+            currentContact = self.contacts![indexPath.row]
+        }
         var nameString: String!
         if (currentContact.name != nil) {
             nameString = currentContact.name!.compositeName
@@ -89,5 +120,14 @@ class ContactsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    // MARK: - Search Results Updating Delegate
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        self.filteredContacts?.removeAll()
+        let searchPredicate: NSPredicate = NSPredicate(format: "name.compositeName contains[cd] %@", self.searchController.searchBar.text!)
+        let searchResults: [APContact] = self.contacts!.filter { searchPredicate.evaluateWithObject($0) }
+        self.filteredContacts = searchResults
+        self.tableView.reloadData()
+    }
 }
