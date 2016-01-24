@@ -7,75 +7,78 @@
 //
 
 import UIKit
+import APAddressBook
 
 class ContactsTableViewController: UITableViewController {
+    
+    var contactsLoader: ContactsLoader!
+    var contacts: [APContact]?
+    let ContactCellIdentifier = "ContactCellIdentifier"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Send To..."
+        self.contactsLoader = ContactsLoader(configuration: ContactsLoaderConfiguration.defaultConfiguration())
+        self.loadContacts()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func setupNavigationBar() {
+        
+    }
+    
+    func loadContacts() {
+        if (ContactsLoader.hasAddressBookAccess()) {
+            self.contactsLoader.loadContactsWithCompletion { (contacts, error) -> () in
+                if (contacts != nil) {
+                    self.contacts = contacts
+                    self.tableView.reloadData()
+                }
+                else {
+                    print(error?.localizedDescription)
+                }
+            }
+        }
+        else {
+            self.contactsLoader.requestAccess({ (accessGranted, error) -> () in
+                if (accessGranted) {
+                    self.loadContacts()
+                }
+                else {
+                    print(error?.localizedDescription)
+                }
+            })
+        }
     }
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        if (contacts != nil && contacts?.count != 0) {
+            return contacts!.count
+        }
         return 0
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCellWithIdentifier(ContactCellIdentifier, forIndexPath: indexPath)
+        let currentContact: APContact = self.contacts![indexPath.row]
+        var nameString: String!
+        if (currentContact.name != nil) {
+            nameString = self.stringForContactName(currentContact.name!)
+        }
+        else {
+            nameString = "'name' parameter is nil"
+        }
+        
+        cell.textLabel?.text = nameString
+        
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     /*
     // MARK: - Navigation
@@ -86,5 +89,24 @@ class ContactsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - Private Helper Methods
+    
+    private func stringForContactName(name: APName) -> String {
+        let firstname = name.firstName
+        let lastname = name.lastName
+        if (firstname != nil && lastname != nil) {
+            return "\(firstname!) \(lastname!)"
+        }
+        else if (firstname != nil) {
+            return firstname!
+        }
+        else if (lastname != nil) {
+            return lastname!
+        }
+        else {
+            return "**no name found**"
+        }
+    }
 
 }
