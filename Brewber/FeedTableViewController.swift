@@ -11,6 +11,7 @@ import UIKit
 class FeedTableViewController: UITableViewController {
     
     let FeedEventCellIdentifier = "FeedEventCellIdentifier"
+    let ContactsTableViewControllerSegueIdentifier: String = "ContactsTableViewControllerSegueIdentifier"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,7 @@ class FeedTableViewController: UITableViewController {
     }
     
     func composeButtonPressed() {
-        
+        self.performSegueWithIdentifier("ContactsTableViewControllerSegueIdentifier", sender: self)
     }
     
     func settingsButtonPressed() {

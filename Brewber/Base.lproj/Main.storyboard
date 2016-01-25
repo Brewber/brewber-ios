@@ -476,7 +476,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCellIdentifier" textLabel="aQZ-b8-1aE" detailTextLabel="hqX-44-JQB" style="IBUITableViewCellStyleValue1" id="RJd-iD-Ott">
-                                <rect key="frame" x="0.0" y="48" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RJd-iD-Ott" id="VlN-3U-SaZ">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -535,6 +535,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="5al-fi-nwq" kind="show" identifier="ContactsTableViewControllerSegueIdentifier" id="G7B-PO-7zH"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
