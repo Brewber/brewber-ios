@@ -34,7 +34,7 @@ class SignupModel: UIViewController, UIPageViewControllerDataSource {
         self.newUser = BrewberUser()
     }
     
-    func setupPageViewController() {
+    private func setupPageViewController() {
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
         self.pageViewController.dataSource = self
         let startVC = self.viewControllerAtIndex(Signup.Paging.EmailSignupViewControllerIndex) as! EmailSignupViewController
@@ -46,7 +46,7 @@ class SignupModel: UIViewController, UIPageViewControllerDataSource {
         self.pageViewController.didMoveToParentViewController(self)
     }
     
-    func setupNavigationBar() {
+    private func setupNavigationBar() {
         self.navigationController!.navigationBar.barTintColor = UIColor.vividRedColor()
         self.navigationController?.navigationBar.topItem?.title = "Sign Up"
         let closeButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Stop, target: self, action: "closeButtonPressed")
@@ -63,14 +63,14 @@ class SignupModel: UIViewController, UIPageViewControllerDataSource {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func setupPageControl() {
+    private func setupPageControl() {
         let pageControl = UIPageControl.appearance()
         pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
         pageControl.currentPageIndicatorTintColor = UIColor.vividRedColor()
         pageControl.backgroundColor = UIColor.gray246Color()
     }
     
-    func disablePageScrolling() {
+    private func disablePageScrolling() {
         for view in self.pageViewController.view.subviews {
             if view is UIScrollView {
                 let scrollView = view as! UIScrollView

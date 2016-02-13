@@ -31,7 +31,7 @@ class EmailSignupViewController: UIViewController, UITextFieldDelegate {
         self.errorLabel.hidden = true
     }
 
-    func setupContinueButton() {
+    private func setupContinueButton() {
         self.continueButton.titleLabel!.text = "Continue"
         self.continueButton.layer.cornerRadius = 5
         self.continueButton.clipsToBounds = true
@@ -39,7 +39,7 @@ class EmailSignupViewController: UIViewController, UITextFieldDelegate {
         self.continueButton.backgroundColor = UIColor.vividRedNoSelectionColor()
     }
     
-    func continueButtonEnabled(enabled: Bool) {
+    private func continueButtonEnabled(enabled: Bool) {
         if (enabled) {
             self.continueButton.backgroundColor = UIColor.vividRedColor()
         }
@@ -49,6 +49,8 @@ class EmailSignupViewController: UIViewController, UITextFieldDelegate {
         self.continueButton.userInteractionEnabled = enabled
     }
     
+    // MARK: - UITextField Customization
+    
     func textfieldDidChange(sender: UITextField) {
         var enableContinueButton: Bool = false
         if (self.passwordTextField.text?.characters.count > 0 &&
@@ -57,6 +59,8 @@ class EmailSignupViewController: UIViewController, UITextFieldDelegate {
         }
         self.continueButtonEnabled(enableContinueButton)
     }
+    
+    // MARK: - IBActions
     
     @IBAction func continueButtonPressed(sender: AnyObject) {
         let username = self.usernameTextField.text
@@ -76,7 +80,7 @@ class EmailSignupViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func proceedAndRegisterUserEmail(email: String, password: String) {
+    private func proceedAndRegisterUserEmail(email: String, password: String) {
         self.signupModel.newUser.email = email
         self.signupModel.newUser.password = password
         self.signupModel.moveToViewControllerAtIndex(Signup.Paging.PhoneVerificationViewControllerIndex, pageDirection: .Forward)

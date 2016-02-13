@@ -83,7 +83,7 @@ class ZipcodeBirthdayViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func isValidBirthday(month: String, day: String) -> Bool {
+    private func isValidBirthday(month: String, day: String) -> Bool {
         var validBirthday: Bool = false
         
         let monthInteger: Int? = Int(month)
@@ -98,7 +98,7 @@ class ZipcodeBirthdayViewController: UIViewController, UITextFieldDelegate {
         return validBirthday
     }
     
-    func isValidZipcode(zipcode: String) -> Bool {
+    private func isValidZipcode(zipcode: String) -> Bool {
         if (zipcode.characters.count != 5) {
             return false
         }
@@ -110,7 +110,7 @@ class ZipcodeBirthdayViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Navigation
     
-    func navigateToHomeScreen() {
+    private func navigateToHomeScreen() {
         
     }
 

@@ -92,14 +92,14 @@ class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func phoneNumberString() -> String {
+    private func phoneNumberString() -> String {
         let areaCode: String = areaCodeField.text!
         let threeNumbers: String = threeNumberField.text!
         let fourNumbers: String = fourNumberField.text!
         return "\(areaCode)\(threeNumbers)\(fourNumbers)"
     }
     
-    func proceedAndRegisterPhoneNumber(phoneNumber: String) {
+    private func proceedAndRegisterPhoneNumber(phoneNumber: String) {
         self.signupModel.newUser.phoneNumber = phoneNumber
         self.signupModel.moveToViewControllerAtIndex(Signup.Paging.ZipcodeEntryViewControllerIndex, pageDirection: .Forward)
     }
