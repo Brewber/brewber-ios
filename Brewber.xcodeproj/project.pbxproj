@@ -10,7 +10,6 @@
 		ABED25E3599F10FDBF77A0F7 /* Pods_Brewber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B26190AB138A01FFDB001E /* Pods_Brewber.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C37ECD551C53F6C7004B4346 /* ContactsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37ECD541C53F6C7004B4346 /* ContactsLoader.swift */; };
 		C37ECD5B1C5421F6004B4346 /* ContactsLoaderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37ECD5A1C5421F6004B4346 /* ContactsLoaderConfiguration.swift */; };
-		C37ECD5D1C5427F9004B4346 /* UserDefaultsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37ECD5C1C5427F9004B4346 /* UserDefaultsConstants.swift */; };
 		C37ECD601C54374B004B4346 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37ECD5F1C54374B004B4346 /* ContactsTableViewController.swift */; };
 		C37ECD621C546795004B4346 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37ECD611C546795004B4346 /* LoginViewController.swift */; };
 		C37ECD641C5559BB004B4346 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37ECD631C5559BB004B4346 /* FeedTableViewController.swift */; };
@@ -48,7 +47,6 @@
 		C37ECD541C53F6C7004B4346 /* ContactsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsLoader.swift; sourceTree = "<group>"; };
 		C37ECD571C540F5B004B4346 /* Brewber-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Brewber-Bridging-Header.h"; sourceTree = "<group>"; };
 		C37ECD5A1C5421F6004B4346 /* ContactsLoaderConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsLoaderConfiguration.swift; sourceTree = "<group>"; };
-		C37ECD5C1C5427F9004B4346 /* UserDefaultsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsConstants.swift; sourceTree = "<group>"; };
 		C37ECD5F1C54374B004B4346 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		C37ECD611C546795004B4346 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C37ECD631C5559BB004B4346 /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
@@ -135,16 +133,12 @@
 		C3A0F8691C449E5800E7A23E /* Brewber */ = {
 			isa = PBXGroup;
 			children = (
-				C37ECD5F1C54374B004B4346 /* ContactsTableViewController.swift */,
+				C3FBF0541C6EDC140005450A /* View Controllers */,
 				C37ECD541C53F6C7004B4346 /* ContactsLoader.swift */,
-				C37ECD5C1C5427F9004B4346 /* UserDefaultsConstants.swift */,
 				C37ECD5A1C5421F6004B4346 /* ContactsLoaderConfiguration.swift */,
 				C3A0F86A1C449E5800E7A23E /* AppDelegate.swift */,
-				C3A0F88A1C48C51B00E7A23E /* AppStartViewController.swift */,
 				C3A0F86E1C449E5800E7A23E /* Main.storyboard */,
 				C3A0F92A1C4DF48000E7A23E /* Core Type Extensions */,
-				C37ECD631C5559BB004B4346 /* FeedTableViewController.swift */,
-				C37ECD611C546795004B4346 /* LoginViewController.swift */,
 				C37ECD5E1C5434CA004B4346 /* Signup */,
 				C3A0F92B1C4F3E6900E7A23E /* BrewberUser.swift */,
 				C3A0F92D1C4F4AC400E7A23E /* BrewberAuth.swift */,
@@ -173,6 +167,17 @@
 				C3A0F9281C4DF47800E7A23E /* String+BrewberAdditions.swift */,
 			);
 			name = "Core Type Extensions";
+			sourceTree = "<group>";
+		};
+		C3FBF0541C6EDC140005450A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C37ECD5F1C54374B004B4346 /* ContactsTableViewController.swift */,
+				C3A0F88A1C48C51B00E7A23E /* AppStartViewController.swift */,
+				C37ECD631C5559BB004B4346 /* FeedTableViewController.swift */,
+				C37ECD611C546795004B4346 /* LoginViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 		F1EE7E78763E692E9A5E8EF0 /* Pods */ = {
@@ -349,7 +354,6 @@
 				C37ECD601C54374B004B4346 /* ContactsTableViewController.swift in Sources */,
 				C3A0F88B1C48C51B00E7A23E /* AppStartViewController.swift in Sources */,
 				C3A0F92E1C4F4AC400E7A23E /* BrewberAuth.swift in Sources */,
-				C37ECD5D1C5427F9004B4346 /* UserDefaultsConstants.swift in Sources */,
 				C3A0F8F51C4C94BE00E7A23E /* UIColor+BrewberThemes.swift in Sources */,
 				C3A0F86B1C449E5800E7A23E /* AppDelegate.swift in Sources */,
 				C37ECD5B1C5421F6004B4346 /* ContactsLoaderConfiguration.swift in Sources */,
