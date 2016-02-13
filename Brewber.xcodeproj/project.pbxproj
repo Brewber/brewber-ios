@@ -28,10 +28,6 @@
 		C3A0F9291C4DF47800E7A23E /* String+BrewberAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F9281C4DF47800E7A23E /* String+BrewberAdditions.swift */; };
 		C3A0F92C1C4F3E6900E7A23E /* BrewberUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F92B1C4F3E6900E7A23E /* BrewberUser.swift */; };
 		C3A0F92E1C4F4AC400E7A23E /* BrewberAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F92D1C4F4AC400E7A23E /* BrewberAuth.swift */; };
-		C3A0F9301C51E2E800E7A23E /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F92F1C51E2E800E7A23E /* NetworkClient.swift */; };
-		C3A0F9321C51E3D900E7A23E /* NetworkRequestItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F9311C51E3D900E7A23E /* NetworkRequestItem.swift */; };
-		C3A0F9351C51EC5100E7A23E /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F9341C51EC5100E7A23E /* NetworkResponse.swift */; };
-		C3A0F9371C51F6EA00E7A23E /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F9361C51F6EA00E7A23E /* NetworkOperation.swift */; };
 		C3FBF0521C6EC5AB0005450A /* BRWRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FBF0511C6EC5AB0005450A /* BRWRouter.swift */; };
 		C3FBF0531C6EC5AB0005450A /* BRWRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FBF0511C6EC5AB0005450A /* BRWRouter.swift */; };
 /* End PBXBuildFile section */
@@ -74,10 +70,6 @@
 		C3A0F9281C4DF47800E7A23E /* String+BrewberAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+BrewberAdditions.swift"; sourceTree = "<group>"; };
 		C3A0F92B1C4F3E6900E7A23E /* BrewberUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrewberUser.swift; sourceTree = "<group>"; };
 		C3A0F92D1C4F4AC400E7A23E /* BrewberAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrewberAuth.swift; sourceTree = "<group>"; };
-		C3A0F92F1C51E2E800E7A23E /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
-		C3A0F9311C51E3D900E7A23E /* NetworkRequestItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestItem.swift; sourceTree = "<group>"; };
-		C3A0F9341C51EC5100E7A23E /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
-		C3A0F9361C51F6EA00E7A23E /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
 		C3FBF0511C6EC5AB0005450A /* BRWRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRWRouter.swift; sourceTree = "<group>"; };
 		E4EE8E2F6D16EAC1BC145871 /* Pods-Brewber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brewber.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Brewber/Pods-Brewber.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,7 +145,6 @@
 				C3A0F92A1C4DF48000E7A23E /* Core Type Extensions */,
 				C37ECD631C5559BB004B4346 /* FeedTableViewController.swift */,
 				C37ECD611C546795004B4346 /* LoginViewController.swift */,
-				C3A0F9331C51E3E000E7A23E /* Networking */,
 				C37ECD5E1C5434CA004B4346 /* Signup */,
 				C3A0F92B1C4F3E6900E7A23E /* BrewberUser.swift */,
 				C3A0F92D1C4F4AC400E7A23E /* BrewberAuth.swift */,
@@ -182,17 +173,6 @@
 				C3A0F9281C4DF47800E7A23E /* String+BrewberAdditions.swift */,
 			);
 			name = "Core Type Extensions";
-			sourceTree = "<group>";
-		};
-		C3A0F9331C51E3E000E7A23E /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				C3A0F92F1C51E2E800E7A23E /* NetworkClient.swift */,
-				C3A0F9361C51F6EA00E7A23E /* NetworkOperation.swift */,
-				C3A0F9311C51E3D900E7A23E /* NetworkRequestItem.swift */,
-				C3A0F9341C51EC5100E7A23E /* NetworkResponse.swift */,
-			);
-			name = Networking;
 			sourceTree = "<group>";
 		};
 		F1EE7E78763E692E9A5E8EF0 /* Pods */ = {
@@ -361,21 +341,17 @@
 				C3A0F92C1C4F3E6900E7A23E /* BrewberUser.swift in Sources */,
 				C3A0F8C51C4C044D00E7A23E /* EmailSignupViewController.swift in Sources */,
 				C3A0F9251C4D795D00E7A23E /* PhoneVerificationViewController.swift in Sources */,
-				C3A0F9301C51E2E800E7A23E /* NetworkClient.swift in Sources */,
 				C37ECD621C546795004B4346 /* LoginViewController.swift in Sources */,
 				C3A0F9271C4D91F500E7A23E /* ZipcodeBirthdayViewController.swift in Sources */,
 				C3A0F8931C49FB9700E7A23E /* SignupModel.swift in Sources */,
 				C37ECD641C5559BB004B4346 /* FeedTableViewController.swift in Sources */,
-				C3A0F9371C51F6EA00E7A23E /* NetworkOperation.swift in Sources */,
 				C3A0F9291C4DF47800E7A23E /* String+BrewberAdditions.swift in Sources */,
 				C37ECD601C54374B004B4346 /* ContactsTableViewController.swift in Sources */,
 				C3A0F88B1C48C51B00E7A23E /* AppStartViewController.swift in Sources */,
 				C3A0F92E1C4F4AC400E7A23E /* BrewberAuth.swift in Sources */,
-				C3A0F9321C51E3D900E7A23E /* NetworkRequestItem.swift in Sources */,
 				C37ECD5D1C5427F9004B4346 /* UserDefaultsConstants.swift in Sources */,
 				C3A0F8F51C4C94BE00E7A23E /* UIColor+BrewberThemes.swift in Sources */,
 				C3A0F86B1C449E5800E7A23E /* AppDelegate.swift in Sources */,
-				C3A0F9351C51EC5100E7A23E /* NetworkResponse.swift in Sources */,
 				C37ECD5B1C5421F6004B4346 /* ContactsLoaderConfiguration.swift in Sources */,
 				C37ECD551C53F6C7004B4346 /* ContactsLoader.swift in Sources */,
 			);
