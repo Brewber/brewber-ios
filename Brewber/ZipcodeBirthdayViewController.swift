@@ -79,17 +79,7 @@ class ZipcodeBirthdayViewController: UIViewController, UITextFieldDelegate {
             // Display zipcode error
         }
         else {
-            // signup the user
-            BrewberAuth.authController.signupUser(self.signupModel.newUser, completion: { (success, error) -> () in
-                if (success) {
-                    self.navigateToHomeScreen()
-                }
-                else {
-                    print(error?.code)
-                    print(error?.localizedDescription)
-                    print(error?.localizedFailureReason)
-                }
-            })
+            // TODO: signup the user
         }
     }
     

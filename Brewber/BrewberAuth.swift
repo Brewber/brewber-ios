@@ -9,58 +9,58 @@
 import UIKit
 import Alamofire
 
-struct BrewberAuthSignup {
-    static let BrewberAuthSignupURL = "http://brewber.herokuapp.com/users"
-    struct parameter {
-        static let name = "name"
-        static let username = "username"
-        static let password = "password"
-        static let phoneNumber = "phone_number"
-    }
-}
-
 class BrewberAuth {
     
-    private static let authController = BrewberAuth()
+    private static let loginURLPath = "/users/sign_in"
+    private static let signupURLPath = "/users.json"
+    private static let logoutURLPath = "/users/sign_out"
     
-    // STUB: - Implement when token is available - fetches user from the keychain
-    static func currentUser() -> BrewberUser? {
-        return nil
-    }
+    private static let emailParameterKey = "email"
+    private static let passwordParameterKey = "password"
     
-    // STUB:
-    func isUserLoggedIn(user: BrewberUser) -> Bool {
-        return false
-    }
-    
-    // STUB:
-    func logourUser(user: BrewberUser) {
+    func logoutCurrentUser(completion:((success: Bool, error: NSError?)->())) {
+//  If we implement currentUser or something similar, we should check it before signing out
+//        defer {
+//            completion(success: false, error: nil)
+//        }
+//        guard let _ = BrewberAuth.currentUser() else {
+//            return
+//        }
         
+        Alamofire.request(.DELETE, BRWRouter.URLStringForPath(BrewberAuth.loginURLPath))
+        .responseJSON { (response) -> Void in
+            // TODO: make this better
+            completion(success: true, error: nil)
+        }
     }
     
-    // STUB:
-    func loginUser(username: String, password: String) {
-        
+    func loginUser(username: String, password: String, completion:((success: Bool, error: NSError?)->())) {
+        let parameters: [String: String] = [BrewberAuth.emailParameterKey: username,
+                                            BrewberAuth.passwordParameterKey: password]
+        let requestURLString = BRWRouter.URLStringForPath(BrewberAuth.loginURLPath)
+        Alamofire.request(.POST, requestURLString, parameters: parameters, encoding: .JSON, headers: nil)
+        .responseJSON { (response) -> Void in
+            // TODO: Make this better
+            completion(success: true, error: nil)
+        }
     }
+    
     
     func signupUser(user: BrewberUser, completion:((success: Bool, error: NSError?)->())) {
-        let parameters: [String: String] = [BrewberAuthSignup.parameter.name: "testname",
-                                            BrewberAuthSignup.parameter.username: user.email,
-                                            BrewberAuthSignup.parameter.password: user.password,
-                                            BrewberAuthSignup.parameter.phoneNumber: user.phoneNumber]
-        Alamofire.request(.POST, BrewberAuthSignup.BrewberAuthSignupURL, parameters: parameters, encoding: .JSON, headers: nil)
-            .responseJSON { (response) -> Void in
-                print(response.request)  // original URL request
-                print(response.response) // URL response
-                print(response.data)     // server data
-                print(response.result)   // result of response serialization
-                
-                response.result.error
-                
-                if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
-                    completion(success: true, error: nil)
-                }
+        let parameters: [String: String] = [BrewberAuth.emailParameterKey: user.email,
+                                            BrewberAuth.passwordParameterKey: user.password]
+        let requestURLString = BRWRouter.URLStringForPath(BrewberAuth.signupURLPath)
+        Alamofire.request(.POST, requestURLString, parameters: parameters, encoding: .JSON, headers: nil)
+        .responseJSON { (response) -> Void in
+            print(response.request)  // original URL request
+            print(response.response) // URL response
+            print(response.data)     // server data
+            print(response.result)   // result of response serialization
+            
+            if let JSON = response.result.value {
+                print("JSON: \(JSON)")
+                completion(success: true, error: nil)
+            }
         }
     }
 }
