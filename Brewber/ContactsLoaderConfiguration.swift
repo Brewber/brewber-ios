@@ -6,17 +6,16 @@
 //  Copyright © 2016 Alex Brashear. All rights reserved.
 //
 
-import UIKit
 import APAddressBook
 
-class ContactsLoaderConfiguration: NSObject {
+struct ContactsLoaderConfiguration {
     
     var fieldsMask: APContactField!
     var filterBlock: APFilterContactsBlock!
     var sortDescriptors: [NSSortDescriptor]?
     
-    class func defaultConfiguration() -> ContactsLoaderConfiguration {
-        let defaultConfiguration = ContactsLoaderConfiguration()
+    static func defaultConfiguration() -> ContactsLoaderConfiguration {
+        var defaultConfiguration = ContactsLoaderConfiguration()
         defaultConfiguration.fieldsMask = [.Name, .PhonesWithLabels, .Birthday, .Thumbnail]
         defaultConfiguration.filterBlock = { (contact: APContact) -> Bool in
             if let phones = contact.phones {

@@ -9,17 +9,15 @@
 import UIKit
 import APAddressBook
 
-class ContactsLoader: NSObject {
+class ContactsLoader {
     
     let addressBook = APAddressBook()
     
     init(configuration: ContactsLoaderConfiguration) {
-        super.init()
         self.setupContactsLoader(configuration)
     }
     
-    override init() {
-        super.init()
+    init() {
         self.setupContactsLoader(ContactsLoaderConfiguration.defaultConfiguration())
     }
     
