@@ -1,5 +1,5 @@
 //
-//  NSString+BrewberAdditions.swift
+//  String+BrewberAdditions.swift
 //  Brewber
 //
 //  Created by Alex Brashear on 1/18/16.
