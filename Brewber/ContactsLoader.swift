@@ -38,7 +38,7 @@ class ContactsLoader {
         }
     }
     
-    class func hasAddressBookAccess() -> Bool {
+    static func hasAddressBookAccess() -> Bool {
         switch APAddressBook.access() {
             case APAddressBookAccess.Granted:
                 return true
