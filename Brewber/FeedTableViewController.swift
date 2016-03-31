@@ -26,9 +26,9 @@ class FeedTableViewController: UITableViewController {
         let titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.navigationController?.navigationBar.titleTextAttributes = titleTextAttributes
         
-        let composeButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: "composeButtonPressed")
+        let composeButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: #selector(composeButtonPressed))
         composeButton.tintColor = UIColor.whiteColor()
-        let settingsButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Organize, target: self, action: "settingsButtonPressed")
+        let settingsButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Organize, target: self, action: #selector(settingsButtonPressed))
         settingsButton.tintColor = UIColor.whiteColor()
         
         self.navigationItem.rightBarButtonItem = composeButton

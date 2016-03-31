@@ -25,13 +25,13 @@ class LoginViewController: UIViewController {
     func setupLoginButton() {
         self.loginButton.layer.cornerRadius = 5
         self.loginButton.clipsToBounds = true
-        self.loginButton.addTarget(self, action: "loginButtonPressed", forControlEvents: UIControlEvents.TouchUpInside)
+        self.loginButton.addTarget(self, action: #selector(loginButtonPressed), forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     func setupNavigationBar() {
         self.navigationController!.navigationBar.barTintColor = UIColor.vividRedColor()
         self.navigationController?.navigationBar.topItem?.title = "Log in"
-        let closeButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Stop, target: self, action: "closeButtonPressed")
+        let closeButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Stop, target: self, action: #selector(closeButtonPressed))
         closeButton.tintColor = UIColor.whiteColor()
         self.navigationItem.leftBarButtonItem = closeButton
         self.navigationController?.navigationBar.translucent = false

@@ -24,11 +24,11 @@ class ZipcodeBirthdayViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.gray246Color()
-        self.dayTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: .EditingChanged)
+        self.dayTextField.addTarget(self, action: #selector(textFieldDidChange), forControlEvents: .EditingChanged)
         self.dayTextField.delegate = self
-        self.monthTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: .EditingChanged)
+        self.monthTextField.addTarget(self, action: #selector(textFieldDidChange), forControlEvents: .EditingChanged)
         self.monthTextField.delegate = self
-        self.zipcodeTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: .EditingChanged)
+        self.zipcodeTextField.addTarget(self, action: #selector(textFieldDidChange), forControlEvents: .EditingChanged)
         self.zipcodeTextField.delegate = self
         
         self.signupButton.layer.cornerRadius = 5

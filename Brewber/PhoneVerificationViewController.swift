@@ -22,11 +22,11 @@ class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.areaCodeField.addTarget(self, action: "textFieldDidChange:", forControlEvents: .EditingChanged)
+        self.areaCodeField.addTarget(self, action: #selector(textFieldDidChange(_:)), forControlEvents: .EditingChanged)
         self.areaCodeField.delegate = self
-        self.threeNumberField.addTarget(self, action: "textFieldDidChange:", forControlEvents: .EditingChanged)
+        self.threeNumberField.addTarget(self, action: #selector(textFieldDidChange(_:)), forControlEvents: .EditingChanged)
         self.threeNumberField.delegate = self
-        self.fourNumberField.addTarget(self, action: "textFieldDidChange:", forControlEvents: .EditingChanged)
+        self.fourNumberField.addTarget(self, action: #selector(textFieldDidChange(_:)), forControlEvents: .EditingChanged)
         self.fourNumberField.delegate = self
         
         self.view.backgroundColor = UIColor.gray246Color()
