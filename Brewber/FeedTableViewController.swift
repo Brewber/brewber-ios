@@ -11,7 +11,7 @@ import UIKit
 class FeedTableViewController: UITableViewController {
     
     let FeedEventCellIdentifier = "FeedEventCellIdentifier"
-    let ContactsTableViewControllerSegueIdentifier: String = "ContactsTableViewControllerSegueIdentifier"
+    let showSendBeerViewControllerSegue = "showSendBeerViewControllerSegue"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +19,13 @@ class FeedTableViewController: UITableViewController {
     }
     
     func setupNavigationBar() {
+        self.navigationController!.navigationBar.barTintColor = UIColor.vividRedColor()
+        self.title = "Feed"
+        self.navigationController?.navigationBar.translucent = false
+        
+        let titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationController?.navigationBar.titleTextAttributes = titleTextAttributes
+        
         let composeButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Compose, target: self, action: "composeButtonPressed")
         composeButton.tintColor = UIColor.whiteColor()
         let settingsButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Organize, target: self, action: "settingsButtonPressed")
@@ -29,7 +36,7 @@ class FeedTableViewController: UITableViewController {
     }
     
     func composeButtonPressed() {
-        self.performSegueWithIdentifier("ContactsTableViewControllerSegueIdentifier", sender: self)
+        self.performSegueWithIdentifier("showSendBeerViewControllerSegue", sender: self)
     }
     
     func settingsButtonPressed() {
