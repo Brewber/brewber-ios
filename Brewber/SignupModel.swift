@@ -23,6 +23,7 @@ class SignupModel: UIViewController, UIPageViewControllerDataSource {
     let pageControlOffset: CGFloat = 40
     var pageViewController: UIPageViewController!
     var newUser: BrewberUser!
+    var successfulSignupdismissBlock:(()->Void)!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +36,7 @@ class SignupModel: UIViewController, UIPageViewControllerDataSource {
     }
     
     private func setupPageViewController() {
-        self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
+        self.pageViewController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
         self.pageViewController.dataSource = self
         let startVC = self.viewControllerAtIndex(Signup.Paging.EmailSignupViewControllerIndex) as! EmailSignupViewController
         let viewControllers = NSArray(object: startVC) as! [UIViewController]
@@ -49,7 +50,7 @@ class SignupModel: UIViewController, UIPageViewControllerDataSource {
     private func setupNavigationBar() {
         self.navigationController!.navigationBar.barTintColor = UIColor.vividRedColor()
         self.navigationController?.navigationBar.topItem?.title = "Sign Up"
-        let closeButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Stop, target: self, action: "closeButtonPressed")
+        let closeButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Stop, target: self, action: #selector(closeButtonPressed))
         closeButton.tintColor = UIColor.whiteColor()
         self.navigationItem.leftBarButtonItem = closeButton
         self.navigationController?.navigationBar.translucent = false
@@ -61,6 +62,10 @@ class SignupModel: UIViewController, UIPageViewControllerDataSource {
     func closeButtonPressed() {
         self.newUser = nil
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func dismissWithSuccessfulSignup() {
+        self.dismissViewControllerAnimated(true, completion: self.successfulSignupdismissBlock)
     }
     
     private func setupPageControl() {

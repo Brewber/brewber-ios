@@ -29,6 +29,10 @@
 		C3A0F92E1C4F4AC400E7A23E /* BrewberAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F92D1C4F4AC400E7A23E /* BrewberAuth.swift */; };
 		C3FBF0521C6EC5AB0005450A /* BRWRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FBF0511C6EC5AB0005450A /* BRWRouter.swift */; };
 		C3FBF0531C6EC5AB0005450A /* BRWRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FBF0511C6EC5AB0005450A /* BRWRouter.swift */; };
+		C3FBF05E1C815B0D0005450A /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3FBF05C1C815B0D0005450A /* Signup.storyboard */; };
+		C3FBF05F1C815B0D0005450A /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3FBF05C1C815B0D0005450A /* Signup.storyboard */; };
+		C3FBF0611C81606C0005450A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3FBF0601C81606C0005450A /* Login.storyboard */; };
+		C3FBF0621C81606C0005450A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3FBF0601C81606C0005450A /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,8 @@
 		C3A0F92B1C4F3E6900E7A23E /* BrewberUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrewberUser.swift; sourceTree = "<group>"; };
 		C3A0F92D1C4F4AC400E7A23E /* BrewberAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrewberAuth.swift; sourceTree = "<group>"; };
 		C3FBF0511C6EC5AB0005450A /* BRWRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRWRouter.swift; sourceTree = "<group>"; };
+		C3FBF05D1C815B0D0005450A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Signup.storyboard; sourceTree = "<group>"; };
+		C3FBF0601C81606C0005450A /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		E4EE8E2F6D16EAC1BC145871 /* Pods-Brewber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brewber.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Brewber/Pods-Brewber.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +144,8 @@
 				C37ECD5A1C5421F6004B4346 /* ContactsLoaderConfiguration.swift */,
 				C3A0F86A1C449E5800E7A23E /* AppDelegate.swift */,
 				C3A0F86E1C449E5800E7A23E /* Main.storyboard */,
+				C3FBF0601C81606C0005450A /* Login.storyboard */,
+				C3FBF05C1C815B0D0005450A /* Signup.storyboard */,
 				C3A0F92A1C4DF48000E7A23E /* Core Type Extensions */,
 				C37ECD5E1C5434CA004B4346 /* Signup */,
 				C3A0F92B1C4F3E6900E7A23E /* BrewberUser.swift */,
@@ -276,6 +284,8 @@
 			files = (
 				C3A0F8751C449E5800E7A23E /* LaunchScreen.storyboard in Resources */,
 				C3A0F8721C449E5800E7A23E /* Assets.xcassets in Resources */,
+				C3FBF05E1C815B0D0005450A /* Signup.storyboard in Resources */,
+				C3FBF0611C81606C0005450A /* Login.storyboard in Resources */,
 				C3A0F8701C449E5800E7A23E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +294,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3FBF0621C81606C0005450A /* Login.storyboard in Resources */,
+				C3FBF05F1C815B0D0005450A /* Signup.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +407,14 @@
 				C3A0F8741C449E5800E7A23E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C3FBF05C1C815B0D0005450A /* Signup.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3FBF05D1C815B0D0005450A /* Base */,
+			);
+			name = Signup.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

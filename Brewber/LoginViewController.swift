@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var loginButton: UIButton!
     
+    var successfulLoginDismissBlock: (()->())!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class LoginViewController: UIViewController {
     func setupLoginButton() {
         self.loginButton.layer.cornerRadius = 5
         self.loginButton.clipsToBounds = true
+        self.loginButton.addTarget(self, action: "loginButtonPressed", forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     func setupNavigationBar() {
@@ -40,6 +42,10 @@ class LoginViewController: UIViewController {
     
     func closeButtonPressed() {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func loginButtonPressed() {
+        self.dismissViewControllerAnimated(true, completion: self.successfulLoginDismissBlock)
     }
     
 

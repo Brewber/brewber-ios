@@ -11,6 +11,9 @@ import UIKit
 class AppStartViewController: UIViewController {
     
     let paddingFromBottom : CGFloat = -120.0
+    let presentSignupModalSegue = "presentSignupModalSegue"
+    let presentFeedViewControllerSegue = "presentFeedViewControllerSegue"
+    let presentLoginModalSegue = "presentLoginModalSegue"
 
     @IBOutlet var signupButton: UIButton!
     @IBOutlet var loginButton: UIButton!
@@ -20,7 +23,7 @@ class AppStartViewController: UIViewController {
 //        self.view.backgroundColor = applicationTintColor()
         setupButton(self.loginButton)
         setupButton(self.signupButton)
-        
+        self.navigationController?.navigationBarHidden = true
     }
     
     func setupButton(button: UIButton) {
@@ -30,12 +33,30 @@ class AppStartViewController: UIViewController {
         button.clipsToBounds = true
     }
     
+    func dismissBlock() -> (() -> ()) {
+        let dismissBlock = {
+            self.performSegueWithIdentifier(self.presentFeedViewControllerSegue, sender: self)
+        }
+        return dismissBlock
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == presentSignupModalSegue {
+            let destinationViewController = segue.destinationViewController as! UINavigationController
+            let signupModel = destinationViewController.topViewController as! SignupModel
+            signupModel.successfulSignupdismissBlock = dismissBlock()
+        }
+        else if segue.identifier == presentFeedViewControllerSegue {
+            self.navigationController?.navigationBarHidden = false
+        }
+        else if segue.identifier == presentLoginModalSegue {
+            let destinationViewController = segue.destinationViewController as! UINavigationController
+            let loginViewController = destinationViewController.topViewController as! LoginViewController
+            loginViewController.successfulLoginDismissBlock = dismissBlock()
+        }
     }
     
 

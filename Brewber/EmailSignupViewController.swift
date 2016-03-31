@@ -24,9 +24,9 @@ class EmailSignupViewController: UIViewController, UITextFieldDelegate {
         self.view.backgroundColor = UIColor.gray246Color()
         self.pageViewController = self.parentViewController as! UIPageViewController
         self.setupContinueButton()
-        self.passwordTextField.addTarget(self, action: "textfieldDidChange:", forControlEvents: .EditingChanged)
+        self.passwordTextField.addTarget(self, action: #selector(textfieldDidChange), forControlEvents: .EditingChanged)
         self.passwordTextField.delegate = self
-        self.usernameTextField.addTarget(self, action: "textfieldDidChange:", forControlEvents: .EditingChanged)
+        self.usernameTextField.addTarget(self, action: #selector(textfieldDidChange), forControlEvents: .EditingChanged)
         self.usernameTextField.delegate = self
         self.errorLabel.hidden = true
     }

@@ -80,6 +80,7 @@ class ZipcodeBirthdayViewController: UIViewController, UITextFieldDelegate {
         }
         else {
             // TODO: signup the user
+            self.signupModel.dismissWithSuccessfulSignup()
         }
     }
     
