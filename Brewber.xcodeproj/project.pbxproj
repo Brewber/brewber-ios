@@ -29,6 +29,7 @@
 		C3A0F92E1C4F4AC400E7A23E /* BrewberAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0F92D1C4F4AC400E7A23E /* BrewberAuth.swift */; };
 		C3DC016A1CADC3A70069B085 /* Compose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DC01681CADC3A70069B085 /* Compose.storyboard */; };
 		C3DC016D1CADC41D0069B085 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DC016B1CADC41D0069B085 /* Settings.storyboard */; };
+		C3DC01711CADCE990069B085 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DC01701CADCE990069B085 /* SettingsTableViewController.swift */; };
 		C3FBF0521C6EC5AB0005450A /* BRWRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FBF0511C6EC5AB0005450A /* BRWRouter.swift */; };
 		C3FBF0531C6EC5AB0005450A /* BRWRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FBF0511C6EC5AB0005450A /* BRWRouter.swift */; };
 		C3FBF05E1C815B0D0005450A /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3FBF05C1C815B0D0005450A /* Signup.storyboard */; };
@@ -76,6 +77,7 @@
 		C3A0F92D1C4F4AC400E7A23E /* BrewberAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrewberAuth.swift; sourceTree = "<group>"; };
 		C3DC01691CADC3A70069B085 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Compose.storyboard; sourceTree = "<group>"; };
 		C3DC016C1CADC41D0069B085 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
+		C3DC01701CADCE990069B085 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		C3FBF0511C6EC5AB0005450A /* BRWRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRWRouter.swift; sourceTree = "<group>"; };
 		C3FBF05D1C815B0D0005450A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Signup.storyboard; sourceTree = "<group>"; };
 		C3FBF0601C81606C0005450A /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 		C3FBF0541C6EDC140005450A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C3DC01701CADCE990069B085 /* SettingsTableViewController.swift */,
 				C37ECD5F1C54374B004B4346 /* ContactsTableViewController.swift */,
 				C3A0F88A1C48C51B00E7A23E /* AppStartViewController.swift */,
 				C37ECD631C5559BB004B4346 /* FeedTableViewController.swift */,
@@ -368,6 +371,7 @@
 				C3A0F9251C4D795D00E7A23E /* PhoneVerificationViewController.swift in Sources */,
 				C37ECD621C546795004B4346 /* LoginViewController.swift in Sources */,
 				C3A0F9271C4D91F500E7A23E /* ZipcodeBirthdayViewController.swift in Sources */,
+				C3DC01711CADCE990069B085 /* SettingsTableViewController.swift in Sources */,
 				C3A0F8931C49FB9700E7A23E /* SignupModel.swift in Sources */,
 				C37ECD641C5559BB004B4346 /* FeedTableViewController.swift in Sources */,
 				C3A0F9291C4DF47800E7A23E /* String+BrewberAdditions.swift in Sources */,
