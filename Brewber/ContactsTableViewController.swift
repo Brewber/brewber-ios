@@ -117,6 +117,9 @@ class ContactsTableViewController: UITableViewController, UISearchBarDelegate, U
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func closeButtonPressed(sender: UIBarButtonItem) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     // MARK: - Search Results Updating Delegate
     
