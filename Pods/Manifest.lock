@@ -3,13 +3,33 @@ PODS:
   - APAddressBook/Core (0.2.3)
   - APAddressBook/Swift (0.2.3):
     - APAddressBook/Core
+  - Braintree (4.2.3):
+    - Braintree/Card (= 4.2.3)
+    - Braintree/Core (= 4.2.3)
+    - Braintree/PayPal (= 4.2.3)
+    - Braintree/UI (= 4.2.3)
+  - Braintree/Card (4.2.3):
+    - Braintree/Core
+  - Braintree/Core (4.2.3)
+  - Braintree/PayPal (4.2.3):
+    - Braintree/Core
+    - Braintree/PayPalOneTouch
+  - Braintree/PayPalDataCollector (4.2.3)
+  - Braintree/PayPalOneTouch (4.2.3):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+  - Braintree/UI (4.2.3):
+    - Braintree/Card
+    - Braintree/Core
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
   - APAddressBook/Swift (~> 0.2)
+  - Braintree (~> 4.2)
 
 SPEC CHECKSUMS:
   Alamofire: 5f730ba29fd113b7ddd71c1e65d0c630acf5d7b0
   APAddressBook: 2a91bf05999548bea210ec9d1a68073f4dc8bfce
+  Braintree: 05791bdc6d43c3faf2f802dd2d687e9f619f7f57
 
 COCOAPODS: 0.38.2
