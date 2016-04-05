@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 class BrewberAuth {
     
@@ -27,40 +26,20 @@ class BrewberAuth {
 //            return
 //        }
         
-        Alamofire.request(.DELETE, BRWRouter.URLStringForPath(BrewberAuth.loginURLPath))
-        .responseJSON { (response) -> Void in
-            // TODO: make this better
-            completion(success: true, error: nil)
-        }
+        
     }
     
     func loginUser(username: String, password: String, completion:((success: Bool, error: NSError?)->())) {
-        let parameters: [String: String] = [BrewberAuth.emailParameterKey: username,
-                                            BrewberAuth.passwordParameterKey: password]
-        let requestURLString = BRWRouter.URLStringForPath(BrewberAuth.loginURLPath)
-        Alamofire.request(.POST, requestURLString, parameters: parameters, encoding: .JSON, headers: nil)
-        .responseJSON { (response) -> Void in
-            // TODO: Make this better
-            completion(success: true, error: nil)
-        }
+//        let parameters: [String: String] = [BrewberAuth.emailParameterKey: username,
+//                                            BrewberAuth.passwordParameterKey: password]
+//        let requestURLString = BRWRouter.URLStringForPath(BrewberAuth.loginURLPath)
     }
     
     
     func signupUser(user: BrewberUser, completion:((success: Bool, error: NSError?)->())) {
-        let parameters: [String: String] = [BrewberAuth.emailParameterKey: user.email,
-                                            BrewberAuth.passwordParameterKey: user.password]
-        let requestURLString = BRWRouter.URLStringForPath(BrewberAuth.signupURLPath)
-        Alamofire.request(.POST, requestURLString, parameters: parameters, encoding: .JSON, headers: nil)
-        .responseJSON { (response) -> Void in
-            print(response.request)  // original URL request
-            print(response.response) // URL response
-            print(response.data)     // server data
-            print(response.result)   // result of response serialization
-            
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
-                completion(success: true, error: nil)
-            }
-        }
+//        let parameters: [String: String] = [BrewberAuth.emailParameterKey: user.email,
+//                                            BrewberAuth.passwordParameterKey: user.password]
+//        let requestURLString = BRWRouter.URLStringForPath(BrewberAuth.signupURLPath)
+//        
     }
 }

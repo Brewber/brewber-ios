@@ -53,11 +53,9 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-Brewber/APAddressBook.framework'
-  install_framework 'Pods-Brewber/Alamofire.framework'
   install_framework 'Pods-Brewber/Braintree.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-Brewber/APAddressBook.framework'
-  install_framework 'Pods-Brewber/Alamofire.framework'
   install_framework 'Pods-Brewber/Braintree.framework'
 fi
