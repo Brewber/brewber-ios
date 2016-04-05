@@ -53,7 +53,7 @@
             </objects>
             <point key="canvasLocation" x="3876" y="305"/>
         </scene>
-        <!--Select Bar Table View Controller-->
+        <!--Choose a Bar-->
         <scene sceneID="Icp-n6-D5j">
             <objects>
                 <tableViewController id="QCW-gg-1lw" customClass="SelectBarTableViewController" customModule="Brewber" customModuleProvider="target" sceneMemberID="viewController">
@@ -69,6 +69,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="mNf-Y2-IsP" kind="show" id="Mpt-9g-B0m"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -76,10 +79,40 @@
                             <outlet property="delegate" destination="QCW-gg-1lw" id="0o1-0B-dRL"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Choose a Bar" id="jN8-j9-Jgl"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ghh-QF-VV5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4574" y="305"/>
+        </scene>
+        <!--Choose a Drink-->
+        <scene sceneID="oAk-iC-NmJ">
+            <objects>
+                <tableViewController id="mNf-Y2-IsP" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eDb-lD-MBc">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Wrb-90-E54">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wrb-90-E54" id="YoP-q7-tbo">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mNf-Y2-IsP" id="4sp-NA-v9K"/>
+                            <outlet property="delegate" destination="mNf-Y2-IsP" id="q7G-Mm-9LW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Choose a Drink" id="CY0-dK-FYj"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SQL-qe-KGG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5256" y="305"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zgo-T4-55T">
