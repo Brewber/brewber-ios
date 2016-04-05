@@ -34,6 +34,7 @@
 		C3DC01751CB03C9D0069B085 /* SelectDrinkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DC01741CB03C9D0069B085 /* SelectDrinkTableViewController.swift */; };
 		C3DC01781CB41ECE0069B085 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DC01771CB41ECE0069B085 /* Drink.swift */; };
 		C3DC017A1CB41EDE0069B085 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DC01791CB41EDE0069B085 /* Bar.swift */; };
+		C3DC017C1CB421780069B085 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DC017B1CB421780069B085 /* PaymentViewController.swift */; };
 		C3FBF0521C6EC5AB0005450A /* BRWRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FBF0511C6EC5AB0005450A /* BRWRouter.swift */; };
 		C3FBF0531C6EC5AB0005450A /* BRWRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FBF0511C6EC5AB0005450A /* BRWRouter.swift */; };
 		C3FBF05E1C815B0D0005450A /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3FBF05C1C815B0D0005450A /* Signup.storyboard */; };
@@ -86,6 +87,7 @@
 		C3DC01741CB03C9D0069B085 /* SelectDrinkTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDrinkTableViewController.swift; sourceTree = "<group>"; };
 		C3DC01771CB41ECE0069B085 /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		C3DC01791CB41EDE0069B085 /* Bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
+		C3DC017B1CB421780069B085 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		C3FBF0511C6EC5AB0005450A /* BRWRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRWRouter.swift; sourceTree = "<group>"; };
 		C3FBF05D1C815B0D0005450A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Signup.storyboard; sourceTree = "<group>"; };
 		C3FBF0601C81606C0005450A /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		C3FBF0541C6EDC140005450A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C3DC017B1CB421780069B085 /* PaymentViewController.swift */,
 				C3DC01721CAEF9C30069B085 /* SelectBarTableViewController.swift */,
 				C3DC01741CB03C9D0069B085 /* SelectDrinkTableViewController.swift */,
 				C3DC01701CADCE990069B085 /* SettingsTableViewController.swift */,
@@ -402,6 +405,7 @@
 				C3A0F88B1C48C51B00E7A23E /* AppStartViewController.swift in Sources */,
 				C3A0F92E1C4F4AC400E7A23E /* BrewberAuth.swift in Sources */,
 				C3A0F8F51C4C94BE00E7A23E /* UIColor+BrewberThemes.swift in Sources */,
+				C3DC017C1CB421780069B085 /* PaymentViewController.swift in Sources */,
 				C3A0F86B1C449E5800E7A23E /* AppDelegate.swift in Sources */,
 				C37ECD5B1C5421F6004B4346 /* ContactsLoaderConfiguration.swift in Sources */,
 				C3DC01781CB41ECE0069B085 /* Drink.swift in Sources */,

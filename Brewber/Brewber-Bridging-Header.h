@@ -9,3 +9,5 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import <APAddressBook/APAddressBook-Bridging.h>
+#import <Braintree/BraintreeCore.h>
+#import <Braintree/BraintreeUI.h>
