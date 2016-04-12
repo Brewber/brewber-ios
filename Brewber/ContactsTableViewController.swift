@@ -96,7 +96,7 @@ class ContactsTableViewController: UITableViewController, UISearchBarDelegate, U
             currentContact = self.contacts![indexPath.row]
         }
         
-        if let nameString = currentContact.name!.compositeName {
+        if let nameString = currentContact.name?.compositeName {
             cell.textLabel?.text = nameString
         }
         else {
