@@ -95,15 +95,13 @@ class ContactsTableViewController: UITableViewController, UISearchBarDelegate, U
         else {
             currentContact = self.contacts![indexPath.row]
         }
-        var nameString: String!
-        if (currentContact.name != nil) {
-            nameString = currentContact.name!.compositeName
+        
+        if let nameString = currentContact.name?.compositeName {
+            cell.textLabel?.text = nameString
         }
         else {
-            nameString = "'name' parameter is nil"
+            cell.textLabel?.text = "'name' parameter is nil"
         }
-        
-        cell.textLabel?.text = nameString
         
         return cell
     }
