@@ -42,7 +42,7 @@ class MenuTableViewController: UITableViewController, BTDropInViewControllerDele
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("barCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("drinkCellIdentifier", forIndexPath: indexPath)
         
         cell.textLabel?.text = "drink \(indexPath.row)"
         
