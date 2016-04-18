@@ -1,22 +1,22 @@
 //
-//  PaymentViewController.swift
+//  MenuTableViewController.swift
 //  Brewber
 //
-//  Created by Alex Brashear on 4/5/16.
+//  Created by Brashear, Alex on 4/13/16.
 //  Copyright © 2016 Alex Brashear. All rights reserved.
 //
 
 import UIKit
 import Braintree
 
+class MenuTableViewController: UITableViewController, BTDropInViewControllerDelegate {
 
-class PaymentViewController: UIViewController, BTDropInViewControllerDelegate {
-    
     var braintreeClient: BTAPIClient?
+    @IBOutlet weak var checkoutButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let clientTokenURL = NSURL(string: "https://braintree-sample-merchant.herokuapp.com/client_token")!
         let clientTokenRequest = NSMutableURLRequest(URL: clientTokenURL)
         clientTokenRequest.setValue("text/plain", forHTTPHeaderField: "Accept")
@@ -30,7 +30,25 @@ class PaymentViewController: UIViewController, BTDropInViewControllerDelegate {
             // Continue to the next section to learn more...
             }.resume()
     }
+
+    // MARK: - Table view data source
+
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 30
+    }
     
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("drinkCellIdentifier", forIndexPath: indexPath)
+        
+        cell.textLabel?.text = "drink \(indexPath.row)"
+        
+        return cell
+    }
+
     // MARK: - Braintree UI delegate
     
     /// Informs the delegate when the user has successfully provided payment info that has been
@@ -65,7 +83,10 @@ class PaymentViewController: UIViewController, BTDropInViewControllerDelegate {
             // TODO: Handle success or failure
             }.resume()
     }
-    @IBAction func buttonTapped(sender: AnyObject) {
+    
+    // Mark: - IBAction's
+    
+    @IBAction func checkoutButtonPressed(sender: UIBarButtonItem) {
         // If you haven't already, create and retain a `BTAPIClient` instance with a
         // tokenization key OR a client token from your server.
         // Typically, you only need to do this once per session.
