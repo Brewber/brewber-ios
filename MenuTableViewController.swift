@@ -103,7 +103,7 @@ extension MenuTableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCellWithIdentifier(String(DrinkTableViewCell), forIndexPath: indexPath) as? DrinkTableViewCell else {
-            assertionFailure("Bad")
+            assertionFailure("Unable to cast DrinkTableViewCell")
             return UITableViewCell()
         }
         
