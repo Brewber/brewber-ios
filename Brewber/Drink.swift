@@ -10,4 +10,7 @@ import Foundation
 
 struct Drink {
     
+    let name: String
+    
+    let price: Double
 }
