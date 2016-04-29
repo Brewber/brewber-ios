@@ -43,6 +43,10 @@
 		C3FBF05F1C815B0D0005450A /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3FBF05C1C815B0D0005450A /* Signup.storyboard */; };
 		C3FBF0611C81606C0005450A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3FBF0601C81606C0005450A /* Login.storyboard */; };
 		C3FBF0621C81606C0005450A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3FBF0601C81606C0005450A /* Login.storyboard */; };
+		D66085641CD3BFDD00175CC0 /* BarProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66085631CD3BFDD00175CC0 /* BarProvider.swift */; };
+		D66085651CD3BFDD00175CC0 /* BarProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66085631CD3BFDD00175CC0 /* BarProvider.swift */; };
+		D66085671CD3C02000175CC0 /* BarParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66085661CD3C02000175CC0 /* BarParser.swift */; };
+		D66085681CD3C02000175CC0 /* BarParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66085661CD3C02000175CC0 /* BarParser.swift */; };
 		D6C63CC21CBEC83F00779A82 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C63CC11CBEC83F00779A82 /* MenuTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +100,8 @@
 		C3FBF0511C6EC5AB0005450A /* BRWRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRWRouter.swift; sourceTree = "<group>"; };
 		C3FBF05D1C815B0D0005450A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Signup.storyboard; sourceTree = "<group>"; };
 		C3FBF0601C81606C0005450A /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		D66085631CD3BFDD00175CC0 /* BarProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarProvider.swift; sourceTree = "<group>"; };
+		D66085661CD3C02000175CC0 /* BarParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarParser.swift; sourceTree = "<group>"; };
 		D6C63CC11CBEC83F00779A82 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = ../MenuTableViewController.swift; sourceTree = "<group>"; };
 		E4EE8E2F6D16EAC1BC145871 /* Pods-Brewber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brewber.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Brewber/Pods-Brewber.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				D660855E1CD3B06A00175CC0 /* Purchase */,
+				D66085631CD3BFDD00175CC0 /* BarProvider.swift */,
+				D66085661CD3C02000175CC0 /* BarParser.swift */,
 				D66085611CD3B0CD00175CC0 /* App Start */,
 				D66085601CD3B0C100175CC0 /* Homescreen */,
 				D660855F1CD3B0B800175CC0 /* Settings */,
@@ -442,8 +450,10 @@
 				C37ECD621C546795004B4346 /* LoginViewController.swift in Sources */,
 				C3A0F9271C4D91F500E7A23E /* ZipcodeBirthdayViewController.swift in Sources */,
 				C3DC01711CADCE990069B085 /* SettingsTableViewController.swift in Sources */,
+				D66085671CD3C02000175CC0 /* BarParser.swift in Sources */,
 				C3A0F8931C49FB9700E7A23E /* SignupModel.swift in Sources */,
 				C37ECD641C5559BB004B4346 /* FeedTableViewController.swift in Sources */,
+				D66085641CD3BFDD00175CC0 /* BarProvider.swift in Sources */,
 				C3A0F9291C4DF47800E7A23E /* String+BrewberAdditions.swift in Sources */,
 				C37ECD601C54374B004B4346 /* ContactsTableViewController.swift in Sources */,
 				C335D9FB1CC6B57C0011D318 /* DrinkTableViewCell.swift in Sources */,
@@ -461,7 +471,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D66085681CD3C02000175CC0 /* BarParser.swift in Sources */,
 				C3FBF0531C6EC5AB0005450A /* BRWRouter.swift in Sources */,
+				D66085651CD3BFDD00175CC0 /* BarProvider.swift in Sources */,
 				C3A0F8801C449E5800E7A23E /* BrewberTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
