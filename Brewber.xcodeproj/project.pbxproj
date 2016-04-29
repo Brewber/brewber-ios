@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		ABED25E3599F10FDBF77A0F7 /* Pods_Brewber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B26190AB138A01FFDB001E /* Pods_Brewber.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		C335D9FF1CC8532D0011D318 /* BarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C335D9FD1CC8532D0011D318 /* BarTableViewCell.swift */; };
-		C335DA001CC8532D0011D318 /* BarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C335D9FE1CC8532D0011D318 /* BarTableViewCell.xib */; };
 		C335D9FB1CC6B57C0011D318 /* DrinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C335D9F91CC6B57C0011D318 /* DrinkTableViewCell.swift */; };
 		C335D9FC1CC6B57C0011D318 /* DrinkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C335D9FA1CC6B57C0011D318 /* DrinkTableViewCell.xib */; };
+		C335D9FF1CC8532D0011D318 /* BarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C335D9FD1CC8532D0011D318 /* BarTableViewCell.swift */; };
+		C335DA001CC8532D0011D318 /* BarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C335D9FE1CC8532D0011D318 /* BarTableViewCell.xib */; };
 		C37ECD551C53F6C7004B4346 /* ContactsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37ECD541C53F6C7004B4346 /* ContactsLoader.swift */; };
 		C37ECD5B1C5421F6004B4346 /* ContactsLoaderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37ECD5A1C5421F6004B4346 /* ContactsLoaderConfiguration.swift */; };
 		C37ECD601C54374B004B4346 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37ECD5F1C54374B004B4346 /* ContactsTableViewController.swift */; };
@@ -59,10 +59,10 @@
 /* Begin PBXFileReference section */
 		79B26190AB138A01FFDB001E /* Pods_Brewber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brewber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91EE81DF64E8E520F80295C1 /* Pods-Brewber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brewber.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brewber/Pods-Brewber.release.xcconfig"; sourceTree = "<group>"; };
-		C335D9FD1CC8532D0011D318 /* BarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarTableViewCell.swift; sourceTree = "<group>"; };
-		C335D9FE1CC8532D0011D318 /* BarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarTableViewCell.xib; sourceTree = "<group>"; };
 		C335D9F91CC6B57C0011D318 /* DrinkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkTableViewCell.swift; sourceTree = "<group>"; };
 		C335D9FA1CC6B57C0011D318 /* DrinkTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrinkTableViewCell.xib; sourceTree = "<group>"; };
+		C335D9FD1CC8532D0011D318 /* BarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarTableViewCell.swift; sourceTree = "<group>"; };
+		C335D9FE1CC8532D0011D318 /* BarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarTableViewCell.xib; sourceTree = "<group>"; };
 		C37ECD541C53F6C7004B4346 /* ContactsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsLoader.swift; sourceTree = "<group>"; };
 		C37ECD571C540F5B004B4346 /* Brewber-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Brewber-Bridging-Header.h"; sourceTree = "<group>"; };
 		C37ECD5A1C5421F6004B4346 /* ContactsLoaderConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsLoaderConfiguration.swift; sourceTree = "<group>"; };
@@ -127,15 +127,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C37ECD5E1C5434CA004B4346 /* Signup */ = {
+		C37ECD5E1C5434CA004B4346 /* Login/Signup */ = {
 			isa = PBXGroup;
 			children = (
+				C37ECD611C546795004B4346 /* LoginViewController.swift */,
 				C3A0F9261C4D91F500E7A23E /* ZipcodeBirthdayViewController.swift */,
 				C3A0F9241C4D795D00E7A23E /* PhoneVerificationViewController.swift */,
 				C3A0F8921C49FB9700E7A23E /* SignupModel.swift */,
 				C3A0F8C41C4C044D00E7A23E /* EmailSignupViewController.swift */,
 			);
-			name = Signup;
+			name = Login/Signup;
 			sourceTree = "<group>";
 		};
 		C3A0F85E1C449E5800E7A23E = {
@@ -161,26 +162,20 @@
 		C3A0F8691C449E5800E7A23E /* Brewber */ = {
 			isa = PBXGroup;
 			children = (
-				C335D9FD1CC8532D0011D318 /* BarTableViewCell.swift */,
-				C335D9FE1CC8532D0011D318 /* BarTableViewCell.xib */,
-				C335D9F91CC6B57C0011D318 /* DrinkTableViewCell.swift */,
-				C335D9FA1CC6B57C0011D318 /* DrinkTableViewCell.xib */,
-				C3FBF0541C6EDC140005450A /* View Controllers */,
+				D660855E1CD3B06A00175CC0 /* Purchase */,
+				D66085611CD3B0CD00175CC0 /* App Start */,
+				D66085601CD3B0C100175CC0 /* Homescreen */,
+				D660855F1CD3B0B800175CC0 /* Settings */,
 				C37ECD541C53F6C7004B4346 /* ContactsLoader.swift */,
 				C37ECD5A1C5421F6004B4346 /* ContactsLoaderConfiguration.swift */,
 				C3A0F86A1C449E5800E7A23E /* AppDelegate.swift */,
-				C3A0F86E1C449E5800E7A23E /* Main.storyboard */,
-				C3DC016B1CADC41D0069B085 /* Settings.storyboard */,
-				C3DC01681CADC3A70069B085 /* Compose.storyboard */,
-				C3FBF0601C81606C0005450A /* Login.storyboard */,
-				C3FBF05C1C815B0D0005450A /* Signup.storyboard */,
+				D660855D1CD3B02700175CC0 /* Storyboards */,
 				C3A0F92A1C4DF48000E7A23E /* Core Type Extensions */,
-				C37ECD5E1C5434CA004B4346 /* Signup */,
+				C37ECD5E1C5434CA004B4346 /* Login/Signup */,
 				C3DC01761CB41EA40069B085 /* Model Objects */,
 				C3A0F92D1C4F4AC400E7A23E /* BrewberAuth.swift */,
 				C3FBF0511C6EC5AB0005450A /* BRWRouter.swift */,
 				C3A0F8711C449E5800E7A23E /* Assets.xcassets */,
-				C3A0F8731C449E5800E7A23E /* LaunchScreen.storyboard */,
 				C3A0F8761C449E5800E7A23E /* Info.plist */,
 				C37ECD571C540F5B004B4346 /* Brewber-Bridging-Header.h */,
 			);
@@ -215,18 +210,55 @@
 			name = "Model Objects";
 			sourceTree = "<group>";
 		};
-		C3FBF0541C6EDC140005450A /* View Controllers */ = {
+		D660855D1CD3B02700175CC0 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				C3A0F86E1C449E5800E7A23E /* Main.storyboard */,
+				C3DC016B1CADC41D0069B085 /* Settings.storyboard */,
+				C3DC01681CADC3A70069B085 /* Compose.storyboard */,
+				C3FBF0601C81606C0005450A /* Login.storyboard */,
+				C3FBF05C1C815B0D0005450A /* Signup.storyboard */,
+				C3A0F8731C449E5800E7A23E /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		D660855E1CD3B06A00175CC0 /* Purchase */ = {
+			isa = PBXGroup;
+			children = (
+				C335D9FD1CC8532D0011D318 /* BarTableViewCell.swift */,
+				C335D9FE1CC8532D0011D318 /* BarTableViewCell.xib */,
+				C335D9F91CC6B57C0011D318 /* DrinkTableViewCell.swift */,
+				C335D9FA1CC6B57C0011D318 /* DrinkTableViewCell.xib */,
 				D6C63CC11CBEC83F00779A82 /* MenuTableViewController.swift */,
 				C3DC01721CAEF9C30069B085 /* SelectBarTableViewController.swift */,
-				C3DC01701CADCE990069B085 /* SettingsTableViewController.swift */,
 				C37ECD5F1C54374B004B4346 /* ContactsTableViewController.swift */,
-				C3A0F88A1C48C51B00E7A23E /* AppStartViewController.swift */,
-				C37ECD631C5559BB004B4346 /* FeedTableViewController.swift */,
-				C37ECD611C546795004B4346 /* LoginViewController.swift */,
 			);
-			name = "View Controllers";
+			name = Purchase;
+			sourceTree = "<group>";
+		};
+		D660855F1CD3B0B800175CC0 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C3DC01701CADCE990069B085 /* SettingsTableViewController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		D66085601CD3B0C100175CC0 /* Homescreen */ = {
+			isa = PBXGroup;
+			children = (
+				C37ECD631C5559BB004B4346 /* FeedTableViewController.swift */,
+			);
+			name = Homescreen;
+			sourceTree = "<group>";
+		};
+		D66085611CD3B0CD00175CC0 /* App Start */ = {
+			isa = PBXGroup;
+			children = (
+				C3A0F88A1C48C51B00E7A23E /* AppStartViewController.swift */,
+			);
+			name = "App Start";
 			sourceTree = "<group>";
 		};
 		F1EE7E78763E692E9A5E8EF0 /* Pods */ = {

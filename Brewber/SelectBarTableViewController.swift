@@ -9,6 +9,8 @@
 import UIKit
 
 class SelectBarTableViewController: UITableViewController {
+    
+    let MenuSegueIdentifier = "menuSegueIdentifier"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +57,14 @@ extension SelectBarTableViewController {
 extension SelectBarTableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
+        self.performSegueWithIdentifier(MenuSegueIdentifier, sender: self)
+    }
+}
+
+// MARK: - Navigation
+
+extension SelectBarTableViewController {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
     }
 }
