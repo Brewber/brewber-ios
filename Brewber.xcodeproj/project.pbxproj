@@ -10,6 +10,8 @@
 		ABED25E3599F10FDBF77A0F7 /* Pods_Brewber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B26190AB138A01FFDB001E /* Pods_Brewber.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C335D9FF1CC8532D0011D318 /* BarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C335D9FD1CC8532D0011D318 /* BarTableViewCell.swift */; };
 		C335DA001CC8532D0011D318 /* BarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C335D9FE1CC8532D0011D318 /* BarTableViewCell.xib */; };
+		C335D9FB1CC6B57C0011D318 /* DrinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C335D9F91CC6B57C0011D318 /* DrinkTableViewCell.swift */; };
+		C335D9FC1CC6B57C0011D318 /* DrinkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C335D9FA1CC6B57C0011D318 /* DrinkTableViewCell.xib */; };
 		C37ECD551C53F6C7004B4346 /* ContactsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37ECD541C53F6C7004B4346 /* ContactsLoader.swift */; };
 		C37ECD5B1C5421F6004B4346 /* ContactsLoaderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37ECD5A1C5421F6004B4346 /* ContactsLoaderConfiguration.swift */; };
 		C37ECD601C54374B004B4346 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37ECD5F1C54374B004B4346 /* ContactsTableViewController.swift */; };
@@ -59,6 +61,8 @@
 		91EE81DF64E8E520F80295C1 /* Pods-Brewber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brewber.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brewber/Pods-Brewber.release.xcconfig"; sourceTree = "<group>"; };
 		C335D9FD1CC8532D0011D318 /* BarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarTableViewCell.swift; sourceTree = "<group>"; };
 		C335D9FE1CC8532D0011D318 /* BarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarTableViewCell.xib; sourceTree = "<group>"; };
+		C335D9F91CC6B57C0011D318 /* DrinkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkTableViewCell.swift; sourceTree = "<group>"; };
+		C335D9FA1CC6B57C0011D318 /* DrinkTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrinkTableViewCell.xib; sourceTree = "<group>"; };
 		C37ECD541C53F6C7004B4346 /* ContactsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsLoader.swift; sourceTree = "<group>"; };
 		C37ECD571C540F5B004B4346 /* Brewber-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Brewber-Bridging-Header.h"; sourceTree = "<group>"; };
 		C37ECD5A1C5421F6004B4346 /* ContactsLoaderConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsLoaderConfiguration.swift; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 			children = (
 				C335D9FD1CC8532D0011D318 /* BarTableViewCell.swift */,
 				C335D9FE1CC8532D0011D318 /* BarTableViewCell.xib */,
+				C335D9F91CC6B57C0011D318 /* DrinkTableViewCell.swift */,
+				C335D9FA1CC6B57C0011D318 /* DrinkTableViewCell.xib */,
 				C3FBF0541C6EDC140005450A /* View Controllers */,
 				C37ECD541C53F6C7004B4346 /* ContactsLoader.swift */,
 				C37ECD5A1C5421F6004B4346 /* ContactsLoaderConfiguration.swift */,
@@ -319,6 +325,7 @@
 			files = (
 				C3A0F8751C449E5800E7A23E /* LaunchScreen.storyboard in Resources */,
 				C3DC016A1CADC3A70069B085 /* Compose.storyboard in Resources */,
+				C335D9FC1CC6B57C0011D318 /* DrinkTableViewCell.xib in Resources */,
 				C3A0F8721C449E5800E7A23E /* Assets.xcassets in Resources */,
 				C3FBF05E1C815B0D0005450A /* Signup.storyboard in Resources */,
 				C3FBF0611C81606C0005450A /* Login.storyboard in Resources */,
@@ -407,6 +414,7 @@
 				C37ECD641C5559BB004B4346 /* FeedTableViewController.swift in Sources */,
 				C3A0F9291C4DF47800E7A23E /* String+BrewberAdditions.swift in Sources */,
 				C37ECD601C54374B004B4346 /* ContactsTableViewController.swift in Sources */,
+				C335D9FB1CC6B57C0011D318 /* DrinkTableViewCell.swift in Sources */,
 				C3A0F88B1C48C51B00E7A23E /* AppStartViewController.swift in Sources */,
 				C3A0F92E1C4F4AC400E7A23E /* BrewberAuth.swift in Sources */,
 				C3A0F8F51C4C94BE00E7A23E /* UIColor+BrewberThemes.swift in Sources */,
