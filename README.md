@@ -1,5 +1,32 @@
 # brewber-ios
 
+#### Log In
+Request Parameters
+```
+{
+    "email": "alexjbrashear@gmail.com",
+    "password": "********"
+}
+```
+
+#### Log Out
+Request Parameters
+```
+{
+    "not sure"   
+}
+```
+
+#### Sign Up
+Request Parameters
+```
+{
+    "email": "...",
+    "password": "...",
+    ...what other information?
+}
+```
+
 #### JSON format for Bars
 ```
 {
