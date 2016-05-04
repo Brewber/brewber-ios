@@ -1,5 +1,7 @@
 # brewber-ios
 
+## Requests
+
 #### Log In
 Request Parameters
 ```
@@ -26,6 +28,8 @@ Request Parameters
     ...what other information?
 }
 ```
+
+## Special Formats
 
 #### JSON format for Bars
 ```
