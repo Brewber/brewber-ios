@@ -2,8 +2,7 @@
 
 ## Requests
 
-#### Log In
-Request Parameters
+#### Log In Request
 ```
 {
     "email": "alexjbrashear@gmail.com",
@@ -11,16 +10,14 @@ Request Parameters
 }
 ```
 
-#### Log Out
-Request Parameters
+#### Log Out Request
 ```
 {
     "not sure"   
 }
 ```
 
-#### Sign Up
-Request Parameters
+#### Sign Up Request
 ```
 {
     "email": "...",
@@ -29,9 +26,48 @@ Request Parameters
 }
 ```
 
-## Special Formats
+#### Nearby Bars Request
+```
+{
+    "receiver_location": "Not sure what form this should come in",
+    "sender_location": "Not sure what form this should come in"
+}
+```
 
-#### JSON format for Bars
+#### Bar Information Request
+```
+{
+    "id": 1234567890
+}
+```
+
+## Responses
+
+#### Log In Response
+```
+{
+}
+```
+
+#### Log Out Response
+```
+{
+}
+```
+
+#### Sign Up Response
+```
+{
+}
+```
+
+#### Nearby Bars Response
+```
+{
+}
+```
+
+#### Bar Information Response
 ```
 {
     "name": "Pony Bar"
