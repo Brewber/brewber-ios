@@ -80,12 +80,14 @@
                 {
                     "name": "Guiness",
                     "type": "dark beer",
-                    "description": ""
+                    "description": "",
+                    "price": 9
                 },
                 {
                     "name": "Blue Moon Summer",
                     "type": "beer",
-                    "description": "Seasonal draft"
+                    "description": "Seasonal draft",
+                    "price": 8
                 }
             ]
         },
@@ -95,12 +97,14 @@
                 {
                     "name": "Patron",
                     "type": "shot",
-                    "description": "tequila shot"
+                    "description": "tequila shot",
+                    "price": 6.66
                 },
                 {
                     "name": "Ketel One",
                     "type": "shot",
                     "description": "vodka shot"
+                    "price": 5
                 }
             ]
         },
@@ -110,12 +114,14 @@
                 {
                     "name": "Manhattan",
                     "type": "cocktail",
-                    "description": "honestly don't know what goes into these"
+                    "description": "honestly don't know what goes into these",
+                    "price": 10
                 },
                 {
                     "name": "Cosmopolitan",
                     "type": "martini",
-                    "description": "honestly don't know what goes into these"
+                    "description": "honestly don't know what goes into these",
+                    "price": 8
                 }
             ]
         }
